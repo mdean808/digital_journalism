@@ -3,11 +3,14 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import './scss/globals.scss'
+import BootstrapVue from "bootstrap-vue";
+
+Vue.use(BootstrapVue);
 
 Vue.config.productionTip = false;
 
 new Vue({
-  router,
-  store,
-  render: h => h(App)
-}).$mount('#app')
+	router,
+	store,
+	render: h => h(App)
+}).$mount('#app');
