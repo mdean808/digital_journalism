@@ -1,11 +1,7 @@
 <template>
     <div class="layout">
         <div class="thumbnails">
-            <video-thumbnail width="100%" height="200px" url="https://www.youtube.com/watch?v=RdoGRjqJxbk"/>
-            <video-thumbnail width="100%" height="200px" url="https://www.youtube.com/watch?v=bJs4ODDvoho"/>
-            <video-thumbnail width="100%" height="200px" url="https://www.youtube.com/watch?v=bJs4ODDvoho"/>
-            <video-thumbnail width="100%" height="200px" url="https://www.youtube.com/watch?v=bJs4ODDvoho"/>
-            <video-thumbnail width="100%" height="200px" url="https://www.youtube.com/watch?v=bJs4ODDvoho"/>
+            <video-thumbnail v-for="(video, i) in videos" :key="i" width="100%" height="200px" :url="video.url"/>
         </div>
         <div class="video">
             <VideoEmbed width="100%" height="35vw" :url="video.url"/>
@@ -44,6 +40,8 @@
 			if (!id) return this.$router.push('/videos');
 			this.video = this.$store.getters.video(this.$route.query.id);
             this.video.author = this.$store.getters.person(this.video.author);
+
+            this.videos = this.$store.getters.videos();
 		}
 	}
 </script>

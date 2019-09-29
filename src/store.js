@@ -33,6 +33,9 @@ export default new Vuex.Store({
 		video: (state) => (id) => {
 			return state.videos.find(video => video.id === id)
 		},
+		videos: (state) => () => {
+			return state.videos
+		},
 		podcast: (state) => (id) => {
 			return state.podcasts.find(podcast => podcast.id === id)
 		},
