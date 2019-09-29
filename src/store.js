@@ -5,27 +5,42 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
 	state: {
-		people: [],
-		videos: [],
+		people: [{
+			id: '0',
+			name: 'Ry Bleckel',
+			email: 'rbleckel@hpa.edu',
+			bio: 'I am ry bleckel who is a bleckel and i really like to sing song',
+			videos: ['0'],
+			podcasts: [],
+			articles: [],
+			photos: []
+		}],
+		videos: [{
+			id: '0',
+			title: 'C A P P A D O C I A',
+			url: 'https://www.youtube.com/watch?v=RdoGRjqJxbk',
+			desc: 'Filmed at ur mums house in turkey (B A L L O O N S)',
+			author: '0'
+		}],
 		podcasts: [],
 		articles: [],
 		photos: [],
 	},
 	getters: {
 		person: (state) => (id) => {
-			return state.people.filter(person => person.id === id)[0]
+			return state.people.find(person => person.id === id)
 		},
 		video: (state) => (id) => {
-			return state.videos.filter(video => video.id === id)[0]
+			return state.videos.find(video => video.id === id)
 		},
 		podcast: (state) => (id) => {
-			return state.podcasts.filter(podcast => podcast.id === id)[0]
+			return state.podcasts.find(podcast => podcast.id === id)
 		},
 		article: (state) => (id) => {
-			return state.articles.filter(article => article.id === id)[0]
+			return state.articles.find(article => article.id === id)
 		},
 		photo: (state) => (id) => {
-			return state.photos.filter(photo => photo.id === id)[0]
+			return state.photos.find(photo => photo.id === id)
 		}
 	},
 	mutations: {},
