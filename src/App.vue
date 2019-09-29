@@ -44,6 +44,18 @@
         color: #2c3e50;
     }
 
+    a {
+        transition: .5s all;
+        border-bottom: 1px solid transparent;
+        text-decoration: none !important;
+    }
+
+    a:hover {
+        text-decoration: none;
+        padding-bottom: 2px;
+        border-bottom: 2px solid white;
+    }
+
     #nav {
         opacity: 0;
         transition: 1s all;
