@@ -5,7 +5,7 @@ import BootstrapVue from 'bootstrap-vue'
 import Home from './views/Home.vue'
 
 Vue.use(Router);
-Vue.use(BootsrapVue);
+Vue.use(BootstrapVue);
 
 
 export default new Router({

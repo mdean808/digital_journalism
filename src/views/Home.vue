@@ -1,7 +1,8 @@
 <template>
-  <div class="header">
-      <h1 class="center">V A S T</h1>
+  <div>
+      <h1>V A S T</h1>
       <hr>
+      <p>Hoi Hoi Hoi DJ</p>
   </div>
 </template>
 
