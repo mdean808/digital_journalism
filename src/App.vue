@@ -3,7 +3,7 @@
         <b-row class="fixed-top py-2">
             <b-col class="text-center navvy">
                 <router-link to="/photos">photos</router-link>
-                <router-link to="/about">videos</router-link>
+                <router-link to="/videos">videos</router-link>
                 <h1 class="mx-5">V A S T</h1>
                 <router-link to="/articles">articles</router-link>
                 <router-link to="/about">about</router-link>
