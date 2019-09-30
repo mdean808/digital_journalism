@@ -71,9 +71,9 @@ export default new Vuex.Store({
 			},
 			{
 				id: '1',
-				title: 'Title',
-				trackId: '34019569',
-				imgLink: 'https://www.irishexaminer.com/remote/media.central.ie/media/images/p/PodcastCornerLogo_large.jpg',
+				title: 'My own identity?',
+				trackId: '688834417',
+				imgLink: 'https://i1.sndcdn.com/artworks-000605450308-4p49v1-t500x500.jpg',
 				desc: 'Most of the time, it\'s hard to be honest with yourself about who you are and present your authentic true self to the world, but to be able to have the courage to tell the world that you\'re hiding yourself, that\'s even harder.\n',
 				author: '3'
 			}

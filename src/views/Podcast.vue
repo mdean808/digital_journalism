@@ -13,12 +13,12 @@
         <div class="profile">
             <b-card class="m-1 text-dark my-0">
                 <div class="avatar">
-                    <img alt="Person's Photo" :src="podcast.author.avatar">
+                    <img alt="Person's Photo" :src="author.avatar">
                 </div>
                 <div class="bio">
-                    <h3>{{podcast.author.name}}</h3>
+                    <h3>{{author.name}}</h3>
                     <div style="width: 50%; height: 2px; background-color: #b9b9b9; margin: auto"></div>
-                    <p class="text-black-50" style="margin-top: 5px">{{podcast.author.bio}}</p>
+                    <p class="text-black-50" style="margin-top: 5px">{{author.bio}}</p>
                 </div>
             </b-card>
         </div>
@@ -39,31 +39,8 @@
 			SoundCloudThumbnail,
 			SoundCloudEmbed
 		},
-		data() {
-			return {
-				podcast: {
-					id: '-1',
-					title: 'Loading...',
-					trackId: '34019569',
-					imgLink: 'https://www.irishexaminer.com/remote/media.central.ie/media/images/p/PodcastCornerLogo_large.jpg',
-					desc: 'Loading...',
-					author: {
-						id: '-1',
-						name: 'Loading...',
-						email: 'Loading...',
-						avatar: 'http://norapc.org/wp-content/uploads/2015/07/avatar-blank.png',
-						bio: 'Loading...',
-						videos: [],
-						podcasts: [],
-						articles: [],
-						photos: []
-					}
-				},
-				podcasts: []
-			}
-		},
 
-		mounted() {
+		beforeMount() {
 			this.fetchData();
 		},
 		watch: {
@@ -72,12 +49,12 @@
 		},
 		methods: {
 			fetchData() {
-				console.log('Fetching Data');
+				console.log('Updating Page');
 				const id = this.$route.query.id;
 				if (!id) return this.$router.push('/podcasts');
 				this.podcast = this.$store.getters.podcast(this.$route.query.id);
-				console.log(this.podcast.trackId);
-				this.podcast.author = this.$store.getters.person(this.podcast.author);
+
+				this.author = this.$store.getters.person(this.podcast.author);
 
 				this.podcasts = this.$store.getters.podcasts();
 			}
