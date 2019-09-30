@@ -16,7 +16,7 @@
             </transition>
         </div>
         <div id="footer" style="height: 150px; width: 100%; background: #1b1e21; padding-top: 40px;" class="text-center">
-            <p>Website by Morgan Dean and Dillon DuPont</p>
+            <p>Website by Dillon DuPont and Morgan Dean</p>
             <p>© Vast Storytelling 2019</p>
         </div>
     </div>
