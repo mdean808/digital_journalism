@@ -44,7 +44,6 @@
 			this.fetchData();
 		},
 		watch: {
-			// call again the method if the route changes
 			'$route': 'fetchData'
 		},
 		methods: {
@@ -58,8 +57,10 @@
 
 				this.podcasts = this.$store.getters.podcasts();
 			}
-		}
-
+		},
+		mounted() {
+			document.getElementById('nav').setAttribute('style', 'opacity: 1; position: sticky;');
+		},
 	}
 </script>
 
