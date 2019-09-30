@@ -9,14 +9,17 @@
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, 
                         "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", 
                         "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";'
+      image="/images/images.jpeg"
       />
 
     <b-row>
       <b-col cols="4">
-        <Box hover color="#6fc3df"  />
+        <Box hover color="#6fc3df" body="custom text 1" />
       </b-col>
       <b-col>
-        <Box hover color="#8d82c4" />
+        <Box hover color="#8d82c4">
+          <p>Some custom <b>HTML</b></p>
+        </Box>
       </b-col>
     </b-row>
     <b-row>

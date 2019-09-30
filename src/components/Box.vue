@@ -2,7 +2,7 @@
     <b-row class="box" :style="cssProps">
         <b-col :class="'px-5 py-5 content ' + boxClass" :style="boxStyle" >
             <h1 :style="headerStyle">{{header}}</h1>
-            <slot name="body">
+            <slot>
                 <p>{{body}}</p>
             </slot>
         </b-col>
@@ -13,6 +13,7 @@
 export default {
     props: {
         'color': String,
+        'image': String,
         'box-style': String, 
         'box-class': String, 
         'header-style': String,
@@ -28,6 +29,7 @@ export default {
     computed: {
         cssProps() { return {
             '--bg-color': this.color || '#242943',
+            '--bg-image': `url(${this.image})`,
             }
         }
     }
@@ -38,7 +40,7 @@ export default {
     .box {
         color: white;
 
-        background-image: url('../assets/images/images.jpeg');
+        background-image: var(--bg-image);;
         background-position: center;
         background-size: cover;
     }
