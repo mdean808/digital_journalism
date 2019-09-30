@@ -22,7 +22,13 @@ export default new Vuex.Store({
 			desc: 'Filmed at ur mums house in turkey (B A L L O O N S)',
 			author: '0'
 		}],
-		podcasts: [],
+		podcasts: [{
+			id: '0',
+			title: 'Sacha Rogan Experience #1',
+			trackId: '34019569',
+			desc: 'Filmed at ur mums house in turkey (B A L L O O N S)',
+			author: '0'
+		}],
 		articles: [],
 		photos: [],
 	},
@@ -38,6 +44,9 @@ export default new Vuex.Store({
 		},
 		podcast: (state) => (id) => {
 			return state.podcasts.find(podcast => podcast.id === id)
+		},
+		podcasts: (state) => (id) => {
+			return state.podcasts
 		},
 		article: (state) => (id) => {
 			return state.articles.find(article => article.id === id)
