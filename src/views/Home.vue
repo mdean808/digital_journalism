@@ -100,18 +100,6 @@
 		components: {
 			Box
 		},
-		mounted() {
-			/*
-                  window.addEventListener('scroll', function () {
-                      if (window.scrollY > 400) {
-                          document.getElementById('nav').setAttribute('style', 'opacity: 1; position: fixed;');
-                      }
-                      if (window.scrollY < 400) {
-                          document.getElementById('nav').setAttribute('style', 'opacity: 0; position: fixed;');
-                      }
-            });
-            */
-		}
 	}
 </script>
 
@@ -120,10 +108,12 @@
         .hide-on-med-and-down {
             display: none !important;
         }
+
         .show-on-med-and-down {
             display: initial !important;
         }
     }
+
     @media only screen and (min-width: 993px) {
         .hide-on-med-and-up {
             display: none !important;

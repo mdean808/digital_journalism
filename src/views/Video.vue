@@ -43,12 +43,7 @@
 			if (!id) return this.$router.push('/videos');
 			this.video = this.$store.getters.video(this.$route.query.id);
             this.video.author = this.$store.getters.person(this.video.author);
-
             this.videos = this.$store.getters.videos();
-
-		},
-		mounted() {
-			document.getElementById('nav').setAttribute('style', 'opacity: 1; position: sticky;');
 		},
 	}
 </script>
