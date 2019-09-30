@@ -13,12 +13,12 @@
         </div>
         <div class="profile">
             <div class="avatar">
-                <img alt="Person's Photo" :src="photo.author.avatar">
+                <img alt="Person's Photo" :src="author.avatar">
             </div>
             <div class="bio">
-                <h3>{{photo.author.name}}</h3>
+                <h3>{{author.name}}</h3>
                 <div style="width: 50%; height: 2px; background-color: #b9b9b9; margin: auto"></div>
-                <p class="text-white-50" style="margin-top: 5px">{{photo.author.bio}}</p>
+                <p class="text-white-50" style="margin-top: 5px">{{author.bio}}</p>
             </div>
         </div>
         <div class="thumbnails show-on-med-and-down hide-on-med-and-up">
@@ -35,24 +35,27 @@
 		components: {
 			PhotoThumbnail,
 		},
-        data() {
-			return {
-				photo: {}
-            }
+        beforeMount() {
+			this.fetchData();
         },
-		beforeMount() {
-			const id = this.$route.query.id;
-			if (!id) return this.$router.push('/photos');
-			this.photo = this.$store.getters.photo(this.$route.query.id);
-			this.photo.author = this.$store.getters.person(this.photo.author);
+		watch: {
+			'$route': 'fetchData'
+		},
+		methods: {
+			fetchData() {
+				const id = this.$route.query.id;
+				if (!id) return this.$router.push('/photos');
+				this.photo = this.$store.getters.photo(this.$route.query.id);
 
-			this.photos = this.$store.getters.photos();
+				this.author = this.$store.getters.person(this.photo.author);
 
+				this.photos = this.$store.getters.photos();
+
+			}
 		},
 		mounted() {
 			document.getElementById('nav').setAttribute('style', 'opacity: 1; position: sticky;');
 		},
-
 	}
 </script>
 
