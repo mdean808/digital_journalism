@@ -1,37 +1,18 @@
 <template>
     <div class="thumb">
         <img :alt="`Thumbnail for ${url}`" :style="{width: width, height: height}"
-             :src="/*`https://img.youtube.com/vi/${videoId}/0.jpg`*/ '//i1.sndcdn.com/artworks-000017079411-pgm0ii-t200x200.jpg'">
+             :src="url">
         <div class="desc">
-            <p>Sacha Rogan Experience #1</p>
-            <span>Filmed in sacha's garage. (ft. Ry)</span>
+            <p>{{title}}</p>
+            <span>{{desc.substring(0, 32) + '...'}}</span>
         </div>
     </div>
 </template>
 
 <script>
 	export default {
-		name: "SoundcloudThumbnail",
-		props: ['url', 'width', 'height'],
-		data() {
-			return {
-				videoId: this.getId()
-			}
-		},
-		methods: {
-			getId() {
-				return this.getParameterByName('v', this.url);
-			},
-			getParameterByName(name, url) {
-				if (!url) url = window.location.href;
-				name = name.replace(/[[\]]/g, '\\$&');
-				const regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
-					results = regex.exec(url);
-				if (!results) return null;
-				if (!results[2]) return '';
-				return decodeURIComponent(results[2].replace(/\+/g, ' '));
-			}
-		}
+		name: "SoundCloudThumbnail",
+		props: ['url', 'width', 'height', 'title', 'desc'],
 	}
 </script>
 

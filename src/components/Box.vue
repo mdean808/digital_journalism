@@ -11,8 +11,8 @@
 export default {
     props: {
         'color': String,
-        'box-style': String, 
-        'box-class': String, 
+        'box-style': String,
+        'box-class': String,
         'header-style': String,
         'header': {
             type: String,

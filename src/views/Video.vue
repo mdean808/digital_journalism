@@ -1,7 +1,7 @@
 <template>
     <div class="layout">
         <div class="thumbnails">
-            <video-thumbnail v-for="(video, i) in videos" :key="i" width="100%" height="200px" :url="video.url"/>
+            <video-thumbnail v-for="(video, i) in videos" :key="i" width="100%" height="200px" :title="video.title" :desc="video.desc" :url="video.url"/>
         </div>
         <div class="video">
             <VideoEmbed width="100%" height="35vw" :url="video.url"/>
@@ -13,7 +13,7 @@
         </div>
         <div class="profile">
             <div class="avatar">
-                <img alt="Person's Photo" src="https://yt3.ggpht.com/a/AGF-l78tH1rjkg_zfpHhS_AL_N4dw5JFbezH5AWpwQ=s176-c-k-c0xffffffff-no-rj-mo">
+                <img alt="Person's Photo" :src="video.author.avatar">
             </div>
             <div class="bio">
                 <h3>{{video.author.name}}</h3>

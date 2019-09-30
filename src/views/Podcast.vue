@@ -1,38 +1,38 @@
 <template>
     <div class="layout mt-5">
         <div class="thumbnails">
-            <SoundcloudThumbnail v-for="(podcast, i) in podcasts" :key="i" width="100%" height="200px" :url="podcast.url"/>
+            <SoundCloudThumbnail v-for="(podcast, i) in podcasts" :key="i" width="100%" height="200px" :title="podcast.title" :desc="podcast.desc" :url="podcast.imgLink"/>
         </div>
         <div class="video">
-            <SoundcloudEmbed width="100%" height="200px" :url="podcast.trackId"/>
+            <SoundCloudEmbed width="100%" height="200px" :url="podcast.trackId"/>
             <div class="desc text-center">
                 <h1>{{podcast.title}}</h1>
                 <div style="width: 50%; height: 2px; background-color: #b9b9b9; margin: 5px auto 10px auto"></div>
-                <p class="text-black-50">{{podcast.desc}}</p>
+                <p class="text-white-50">{{podcast.desc}}</p>
             </div>
         </div>
         <div class="profile">
             <div class="avatar">
-                <img alt="Person's Photo" src="https://yt3.ggpht.com/a/AGF-l78tH1rjkg_zfpHhS_AL_N4dw5JFbezH5AWpwQ=s176-c-k-c0xffffffff-no-rj-mo">
+                <img alt="Person's Photo" :src="podcast.author.avatar">
             </div>
             <div class="bio">
                 <h3>{{podcast.author.name}}</h3>
                 <div style="width: 50%; height: 2px; background-color: #b9b9b9; margin: auto"></div>
-                <p class="text-black-50" style="margin-top: 5px">{{podcast.author.bio}}</p>
+                <p class="text-white-50" style="margin-top: 5px">{{podcast.author.bio}}</p>
             </div>
         </div>
     </div>
 </template>
 
 <script>
-	import SoundcloudEmbed from '../components/SoundcloudEmbed.vue'
-	import SoundcloudThumbnail from "../components/SoundcloudThumbnail";
+	import SoundCloudEmbed from '../components/SoundCloudEmbed.vue'
+	import SoundCloudThumbnail from "../components/SoundCloudThumbnail";
 
 	export default {
 		name: "Podcast",
 		components: {
-			SoundcloudThumbnail,
-			SoundcloudEmbed
+			SoundCloudThumbnail,
+			SoundCloudEmbed
 		},
 
 		beforeMount() {

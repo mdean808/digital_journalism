@@ -3,8 +3,8 @@
         <img :alt="`Thumbnail for ${url}`" :style="{width: width, height: height}"
              :src="`https://img.youtube.com/vi/${videoId}/0.jpg`">
         <div class="desc">
-            <p>Cappadocia</p>
-            <span>Filmed in turkey. (B A L L O O N S)</span>
+            <p>{{title}}</p>
+            <span>{{desc.substring(0, 32) + '...'}}</span>
         </div>
     </div>
 </template>
@@ -12,7 +12,7 @@
 <script>
 	export default {
 		name: "VideoThumbnail",
-		props: ['url', 'width', 'height'],
+		props: ['url', 'width', 'height', 'title', 'desc'],
 		data() {
 			return {
 				videoId: this.getId()
