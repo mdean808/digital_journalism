@@ -1,48 +1,49 @@
 <template>
     <div class="layout">
         <div class="thumbnails">
-            <video-thumbnail v-for="(video, i) in videos" :key="i" :id="video.id" width="100%" height="200px" :title="video.title" :desc="video.desc" :url="video.url"/>
+            <photo-thumbnail v-for="(photo, i) in photos" :key="i" width="100%" height="200px" :title="photo.title" :desc="photo.desc" :url="photo.url"/>
         </div>
         <div class="video">
-            <VideoEmbed width="100%" height="35vw" :url="video.url"/>
+            <img alt="Photo Alternate" style="width: 100%; height: 35vw" :src="photo.url"/>
             <div class="desc text-center">
-                <h1>{{video.title}}</h1>
+                <h1>{{photo.title}}</h1>
                 <div style="width: 50%; height: 2px; background-color: #b9b9b9; margin: 5px auto 10px auto"></div>
-                <p class="text-white-50">{{video.desc}}</p>
+                <p class="text-white-50">{{photo.desc}}</p>
             </div>
         </div>
         <div class="profile">
             <div class="avatar">
-                <img alt="Person's Photo" :src="video.author.avatar">
+                <img alt="Person's Photo" :src="photo.author.avatar">
             </div>
             <div class="bio">
-                <h3>{{video.author.name}}</h3>
+                <h3>{{photo.author.name}}</h3>
                 <div style="width: 50%; height: 2px; background-color: #b9b9b9; margin: auto"></div>
-                <p class="text-white-50" style="margin-top: 5px">{{video.author.bio}}</p>
+                <p class="text-white-50" style="margin-top: 5px">{{photo.author.bio}}</p>
             </div>
         </div>
     </div>
 </template>
 
 <script>
-	import VideoEmbed from '../components/VideoEmbed.vue'
-	import VideoThumbnail from "../components/VideoThumbnail";
+	import PhotoThumbnail from '../components/PhotoThumbnail.vue'
 
 	export default {
-		name: "Video",
+		name: "Photo",
 		components: {
-			VideoThumbnail,
-			VideoEmbed
+			PhotoThumbnail,
 		},
-
-		async beforeMount() {
+        data() {
+			return {
+				photo: {}
+            }
+        },
+		beforeMount() {
 			const id = this.$route.query.id;
-			if (!id) return this.$router.push('/videos');
-			this.video = this.$store.getters.video(this.$route.query.id);
-            this.video.author = this.$store.getters.person(this.video.author);
+			if (!id) return this.$router.push('/photos');
+			this.photo = this.$store.getters.photo(this.$route.query.id);
+			this.photo.author = this.$store.getters.person(this.photo.author);
 
-            this.videos = this.$store.getters.videos();
-			document.getElementById('nav').setAttribute('style', 'opacity: 1; position: sticky;');
+			this.photos = this.$store.getters.photos();
 
 		},
 		mounted() {

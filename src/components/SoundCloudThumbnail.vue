@@ -1,7 +1,7 @@
 <template>
-    <div class="thumb" @click="goto(id)">
+    <div class="thumb">
         <img :alt="`Thumbnail for ${url}`" :style="{width: width, height: height}"
-             :src="`https://img.youtube.com/vi/${videoId}/0.jpg`">
+             :src="url">
         <div class="desc">
             <p>{{title}}</p>
             <span>{{desc.substring(0, 32) + '...'}}</span>
@@ -11,37 +11,14 @@
 
 <script>
 	export default {
-		name: "VideoThumbnail",
-		props: ['url', 'width', 'height', 'title', 'desc', 'id'],
-		data() {
-			return {
-				videoId: this.getId()
-			}
-		},
-		methods: {
-			getId() {
-				return this.getParameterByName('v', this.url);
-			},
-			getParameterByName(name, url) {
-				if (!url) url = window.location.href;
-				name = name.replace(/[[\]]/g, '\\$&');
-				const regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
-					results = regex.exec(url);
-				if (!results) return null;
-				if (!results[2]) return '';
-				return decodeURIComponent(results[2].replace(/\+/g, ' '));
-			},
-            goto(id) {
-				this.$router.push(`/video?id=${id}`)
-            }
-		}
+		name: "SoundCloudThumbnail",
+		props: ['url', 'width', 'height', 'title', 'desc'],
 	}
 </script>
 
 <style lang="scss" scoped>
 
     .thumb:hover {
-        height: 200px;
         .desc {
             transform: scale(1.05);
         }

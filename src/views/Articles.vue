@@ -7,7 +7,7 @@
 <script>
 
 	export default {
-		name: "About",
+		name: "Articles",
 		mounted() {
 			document.getElementById('nav').setAttribute('style', 'opacity: 1; position: sticky;');
 		},

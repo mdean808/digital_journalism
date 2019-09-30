@@ -1,7 +1,7 @@
 <template>
     <div class="layout">
         <div class="thumbnails my-1">
-            <SoundcloudThumbnail v-for="(podcast, i) in podcasts" :key="i" width="100%" height="200px" :url="podcast.url"/>
+            <SoundCloudThumbnail v-for="(podcast, i) in podcasts" :key="i" width="100%" height="200px" :title="podcast.title" :desc="podcast.desc" :url="podcast.imgLink"/>
         </div>
         <div class="video mr-5">
             <SoundcloudEmbed class="my-1" width="100%" height="200px" :url="podcast.trackId"/>
@@ -25,14 +25,14 @@
 </template>
 
 <script>
-	import SoundcloudEmbed from '../components/SoundcloudEmbed.vue'
-	import SoundcloudThumbnail from "../components/SoundcloudThumbnail";
+	import SoundCloudEmbed from '../components/SoundCloudEmbed.vue'
+	import SoundCloudThumbnail from "../components/SoundCloudThumbnail";
 
 	export default {
 		name: "Podcast",
 		components: {
-			SoundcloudThumbnail,
-			SoundcloudEmbed
+			SoundCloudThumbnail,
+			SoundCloudEmbed
 		},
 
 		beforeMount() {
@@ -43,7 +43,12 @@
             this.podcast.author = this.$store.getters.person(this.podcast.author);
 
             this.podcasts = this.$store.getters.podcasts();
-		}
+			document.getElementById('nav').setAttribute('style', 'opacity: 1; position: sticky;');
+
+		},
+		mounted() {
+			document.getElementById('nav').setAttribute('style', 'opacity: 1; position: sticky;');
+		},
 	}
 </script>
 
