@@ -9,10 +9,12 @@
                 <router-link to="/articles">articles</router-link>
             </b-col>
         </b-row>
-        <transition name="fade" mode="out-in">
-            <router-view/>
-        </transition>
-        <div id="footer" style="height: 150px; width: 100%; background: #1b1e21; padding-top: 40px;bottom: 0" class="text-center">
+        <div class="body">
+            <transition name="fade" mode="out-in">
+                <router-view />
+            </transition>
+        </div>
+        <div id="footer" style="height: 150px; width: 100%; background: #1b1e21; padding-top: 40px;" class="text-center">
             <p>Website by Morgan Dean and Dillon DuPont</p>
             <p>© Vast Storytelling 2019</p>
         </div>
@@ -35,6 +37,10 @@
 </script>
 
 <style lang="scss">
+    .body {
+        min-height: calc(100vh - 217px);
+    }
+
     body {
         font-family: 'Avenir', Helvetica, Arial, sans-serif;
         -webkit-font-smoothing: antialiased;
@@ -62,7 +68,6 @@
     }
 
     #nav {
-        opacity: 0;
         transition: 1s all;
     }
 

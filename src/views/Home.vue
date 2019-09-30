@@ -28,12 +28,12 @@
     <b-row>
       <b-col cols="8">
         <router-link to="/podcasts">
-          <Box hover color="#ec8d81" header="Podcasts" body="feast your ears on captivating podcasts" />
+          <Box hover color="#ec8d81" header="Podcasts" body="feast your ears on captivating podcasts" image="https://upload.wikimedia.org/wikipedia/commons/9/9a/Submillimeter_Array_Night.jpg" parallax />
         </router-link>
       </b-col>
       <b-col>
         <router-link to="/articles">
-          <Box hover color="#e7b788" header="Articles" body="read some interesting texts" />
+          <Box hover color="#e7b788" header="Articles" body="read some interesting texts" image="https://media.nbcdfw.com/images/1941*1092/AP_19196579152982.jpg" parallax />
         </router-link>
       </b-col>
     </b-row>
@@ -42,6 +42,10 @@
 </template>
 
 <style>
+#nav {
+        opacity: 0;
+}
+
 html {
   scroll-behavior: smooth;
 }
