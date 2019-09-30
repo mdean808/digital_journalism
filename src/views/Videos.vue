@@ -23,7 +23,6 @@
 			for (let video of this.videos) {
 				video.yt_id = this.getParameterByName('v', video.url);
 			}
-			document.getElementById('nav').setAttribute('style', 'opacity: 1; position: sticky;');
 		},
 		mounted() {
 			document.getElementById('nav').setAttribute('style', 'opacity: 1; position: sticky;');

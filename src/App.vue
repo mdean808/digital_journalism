@@ -5,13 +5,17 @@
                 <router-link to="/photos">photos</router-link>
                 <router-link to="/videos">videos</router-link>
                 <router-link to="/"><h1 class="mx-5">V A S T</h1></router-link>
-                <router-link to="/articles">articles</router-link>
                 <router-link to="/podcasts">podcasts</router-link>
+                <router-link to="/articles">articles</router-link>
             </b-col>
         </b-row>
         <transition name="fade" mode="out-in">
             <router-view/>
         </transition>
+        <div id="footer" style="height: 150px; width: 100%; background: #1b1e21; padding-top: 40px; position: fixed; bottom: 0" class="text-center">
+            <p>Website by Morgan Dean and Dillon DuPont</p>
+            <p>© Vast Storytelling 2019</p>
+        </div>
     </div>
 </template>
 
@@ -50,6 +54,11 @@
         text-decoration: none;
         padding-bottom: 2px;
         border-bottom: 2px solid white;
+    }
+
+    a.btn:hover {
+        text-decoration: none !important;
+        padding-bottom: 5px;
     }
 
     #nav {

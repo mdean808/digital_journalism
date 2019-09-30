@@ -20,7 +20,6 @@
 		},
 		beforeMount() {
 			this.photos = this.$store.getters.photos();
-			document.getElementById('nav').setAttribute('style', 'opacity: 1; position: sticky;');
 		},
 		mounted() {
 			document.getElementById('nav').setAttribute('style', 'opacity: 1; position: sticky;');

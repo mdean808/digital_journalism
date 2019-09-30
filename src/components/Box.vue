@@ -46,7 +46,6 @@
 <style scoped>
     .box {
         color: white;
-        cursor: pointer;
         background-image: var(--bg-image);
         background-position: center;
         background-size: cover;
@@ -73,6 +72,7 @@
 
     .box[hover]:hover .content:before {
         opacity: 0.5;
+        cursor: pointer;
     }
 
     .box .content {
