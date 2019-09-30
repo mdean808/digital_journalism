@@ -9,34 +9,37 @@
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
                         "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
                         "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";'
-        />
+      image="/images/images.jpeg"
+      />
 
-        <b-row>
-            <b-col cols="4">
-                <Box hover color="#6fc3df"/>
-            </b-col>
-            <b-col>
-                <Box hover color="#8d82c4"/>
-            </b-col>
-        </b-row>
-        <b-row>
-            <b-col cols="8">
-                <Box hover color="#ec8d81"/>
-            </b-col>
-            <b-col>
-                <Box hover color="#e7b788"/>
-            </b-col>
-        </b-row>
-        <b-row>
-            <b-col cols="4">
-                <Box hover color="#8ea9e8"/>
-            </b-col>
-            <b-col>
-                <Box hover color="#87c5a4"/>
-            </b-col>
-        </b-row>
-        <Box box-style="padding-top: 150px !important; padding-bottom: 150px !important;"/>
-    </div>
+    <b-row>
+      <b-col cols="4">
+        <Box hover color="#6fc3df" body="custom text 1" />
+      </b-col>
+      <b-col>
+        <Box hover color="#8d82c4">
+          <p>Some custom <b>HTML</b></p>
+        </Box>
+      </b-col>
+    </b-row>
+    <b-row>
+      <b-col cols="8">
+        <Box hover color="#ec8d81" />
+      </b-col>
+      <b-col>
+        <Box hover color="#e7b788" />
+      </b-col>
+    </b-row>
+    <b-row>
+      <b-col cols="4">
+        <Box hover color="#8ea9e8" />
+      </b-col>
+      <b-col>
+        <Box hover color="#87c5a4" />
+      </b-col>
+    </b-row>
+    <Box box-style="padding-top: 150px !important; padding-bottom: 150px !important;" />
+  </div>
 </template>
 
 <style scoped>
