@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <b-container fluid>
         <Box parallax
              box-class="text-center"
              box-style="padding-top: 200px !important; padding-bottom: 150px !important; height: 100vh"
@@ -38,7 +38,7 @@
       </b-col>
     </b-row>
     <Box box-style="padding-top: 150px !important; padding-bottom: 150px !important; text-align: center" header="A Storytelling hub" body="Content by Digital Journalism students of '19 - '20" />
-  </div>
+    </b-container>
 </template>
 
 <style>
