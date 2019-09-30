@@ -13,7 +13,7 @@
 
     <b-row>
       <b-col cols="4">
-        <Box hover color="#6fc3df" />
+        <Box hover color="#6fc3df"  />
       </b-col>
       <b-col>
         <Box hover color="#8d82c4" />

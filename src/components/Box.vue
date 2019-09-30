@@ -2,7 +2,9 @@
     <b-row class="box" :style="cssProps">
         <b-col :class="'px-5 py-5 content ' + boxClass" :style="boxStyle" >
             <h1 :style="headerStyle">{{header}}</h1>
-            <p>{{body}}</p>
+            <slot name="body">
+                <p>{{body}}</p>
+            </slot>
         </b-col>
     </b-row>
 </template>
