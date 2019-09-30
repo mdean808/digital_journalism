@@ -8,7 +8,7 @@
             <div class="desc text-center">
                 <h1>{{video.title}}</h1>
                 <div style="width: 50%; height: 2px; background-color: #b9b9b9; margin: 5px auto 10px auto"></div>
-                <p class="text-black-50">{{video.desc}}</p>
+                <p class="text-white-50">{{video.desc}}</p>
             </div>
         </div>
         <div class="profile">
@@ -18,7 +18,7 @@
             <div class="bio">
                 <h3>{{video.author.name}}</h3>
                 <div style="width: 50%; height: 2px; background-color: #b9b9b9; margin: auto"></div>
-                <p class="text-black-50" style="margin-top: 5px">{{video.author.bio}}</p>
+                <p class="text-white-50" style="margin-top: 5px">{{video.author.bio}}</p>
             </div>
         </div>
     </div>

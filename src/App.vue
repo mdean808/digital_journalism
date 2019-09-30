@@ -1,6 +1,6 @@
 <template>
     <div id="app">
-        <b-row id="nav" class="fixed-top py-2" style="position: sticky;">
+        <b-row id="nav" class="fixed-top py-2" style="position: absolute;">
             <b-col class="text-center navvy">
                 <router-link to="/photos">photos</router-link>
                 <router-link to="/videos">videos</router-link>
@@ -22,21 +22,10 @@
             return {}
 		},
 		methods: {},
-        //todo: make this run every time a router is switched
-
-		mounted() {
-			if (this.$router.currentRoute.name === 'Home') {
-				window.addEventListener('scroll', function () {
-					if (window.scrollY > 400) {
-						document.getElementById('nav').setAttribute('style', 'opacity: 1');
-					}
-					if (window.scrollY < 400) {
-						document.getElementById('nav').setAttribute('style', 'opacity: 0');
-					}
-				});
-			} else {
-				document.getElementById('nav').setAttribute('style', 'opacity: 1');
-            }
+        mounted() {
+			if (this.$router.currentRoute.name !== 'Home') {
+				document.getElementById('nav').setAttribute('style', 'opacity: 1; position: sticky;');
+			}
 		}
 	}
 </script>
