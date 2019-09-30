@@ -21,9 +21,6 @@
 		beforeMount() {
 			this.podcasts = this.$store.getters.podcasts();
 		},
-		mounted() {
-			document.getElementById('nav').setAttribute('style', 'opacity: 1; position: sticky;');
-		},
 	}
 </script>
 

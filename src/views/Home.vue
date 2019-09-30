@@ -45,7 +45,7 @@
             </b-row>
         </div>
         <div class="show-on-med-and-down hide-on-med-and-up">
-            <b-row id="content">
+            <b-row>
                 <b-col>
                     <router-link to="/photos">
                         <Box hover color="#6fc3df" header="Photos" body="look at amazing photos"

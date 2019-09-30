@@ -8,9 +8,6 @@
 
 	export default {
 		name: "Articles",
-		mounted() {
-			document.getElementById('nav').setAttribute('style', 'opacity: 1; position: sticky;');
-		},
 	}
 </script>
 

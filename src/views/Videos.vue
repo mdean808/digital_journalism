@@ -24,9 +24,6 @@
 				video.yt_id = this.getParameterByName('v', video.url);
 			}
 		},
-		mounted() {
-			document.getElementById('nav').setAttribute('style', 'opacity: 1; position: sticky;');
-		},
 		methods: {
 			getParameterByName(name, url) {
 				if (!url) url = window.location.href;

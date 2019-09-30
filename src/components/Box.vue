@@ -37,7 +37,7 @@
 		},
 		methods: {
 			goto(link) {
-				this.$router.push(link)
+				if (link) this.$router.push(link)
 			}
 		}
 	}

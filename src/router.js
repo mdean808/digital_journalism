@@ -3,7 +3,6 @@ import Router from 'vue-router'
 
 import Home from './views/Home.vue'
 import About from './views/About.vue'
-
 import Video from './views/Video.vue'
 import Videos from './views/Videos.vue'
 import Podcast from './views/Podcast.vue'
@@ -12,6 +11,7 @@ import Photo from './views/Photo.vue'
 import Photos from './views/Photos.vue'
 import Article from "./views/Article";
 import Articles from "./views/Articles";
+
 Vue.use(Router);
 
 
@@ -65,7 +65,7 @@ export default new Router({
 			component: Article
 		},
 		{
-			path: '/Articles',
+			path: '/articles',
 			name: 'Articles',
 			component: Articles
 		},
