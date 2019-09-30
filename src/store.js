@@ -64,7 +64,7 @@ export default new Vuex.Store({
 			{
 				id: '0',
 				title: 'Sacha Rogan Experience #1',
-				trackId: '34019569',
+				url: 'https://soundcloud.com/sacha-grunberg/podcast-episode-0-the-ry-bleckel-experience',
 				imgLink: 'https://www.irishexaminer.com/remote/media.central.ie/media/images/p/PodcastCornerLogo_large.jpg',
 				desc: 'This podcast features Ry Bleckel telling his story about the struggles he has experienced in baseball season these last couple of years.',
 				author: '1'
