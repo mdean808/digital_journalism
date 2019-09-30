@@ -42,7 +42,6 @@
             this.video.author = this.$store.getters.person(this.video.author);
 
             this.videos = this.$store.getters.videos();
-			document.getElementById('nav').setAttribute('style', 'opacity: 1; position: sticky;');
 
 		},
 		mounted() {

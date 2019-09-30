@@ -5,8 +5,8 @@
                 <router-link to="/photos">photos</router-link>
                 <router-link to="/videos">videos</router-link>
                 <router-link to="/"><h1 class="mx-5">V A S T</h1></router-link>
-                <router-link to="/articles">articles</router-link>
                 <router-link to="/podcasts">podcasts</router-link>
+                <router-link to="/articles">articles</router-link>
             </b-col>
         </b-row>
         <transition name="fade" mode="out-in">

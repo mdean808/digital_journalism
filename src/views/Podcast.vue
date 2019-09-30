@@ -43,8 +43,6 @@
             this.podcast.author = this.$store.getters.person(this.podcast.author);
 
             this.podcasts = this.$store.getters.podcasts();
-			document.getElementById('nav').setAttribute('style', 'opacity: 1; position: sticky;');
-
 		},
 		mounted() {
 			document.getElementById('nav').setAttribute('style', 'opacity: 1; position: sticky;');
