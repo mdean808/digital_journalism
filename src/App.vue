@@ -1,6 +1,6 @@
 <template>
     <div id="app">
-        <b-row id="nav" class="fixed-top py-2" style="position: absolute;">
+        <b-row id="nav" class="fixed-top py-2 mt-2" style="position: absolute;">
             <b-col class="text-center navvy">
                 <router-link to="/photos">photos</router-link>
                 <router-link to="/videos">videos</router-link>
@@ -9,6 +9,7 @@
                 <router-link to="/articles">articles</router-link>
             </b-col>
         </b-row>
+        
         <div class="body">
             <transition name="fade" mode="out-in">
                 <router-view />

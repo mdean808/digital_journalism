@@ -64,7 +64,7 @@ html {
 		mounted() {
 			window.addEventListener('scroll', function () {
 				if (window.scrollY > 400) {
-					document.getElementById('nav').setAttribute('style', 'opacity: 0; position: fixed;');
+					document.getElementById('nav').setAttribute('style', 'opacity: 1; position: fixed;');
 				}
 				if (window.scrollY < 400) {
 					document.getElementById('nav').setAttribute('style', 'opacity: 0; position: fixed;');
