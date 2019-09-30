@@ -49,9 +49,7 @@
 			this.photos = this.$store.getters.photos();
 
 		},
-		mounted() {
-			document.getElementById('nav').setAttribute('style', 'opacity: 1; position: sticky;');
-		},
+
 	}
 </script>
 

@@ -4,23 +4,24 @@
             <b-col class="text-center navvy">
                 <router-link to="/photos">photos</router-link>
                 <router-link to="/videos">videos</router-link>
-                <router-link to="/"><h1 class="mx-5">V A S T</h1></router-link>
+                <router-link to="/" class="hide-on-med-and-down"><h1 class="mx-5">V A S T</h1></router-link>
                 <router-link to="/podcasts">podcasts</router-link>
                 <router-link to="/articles">articles</router-link>
             </b-col>
         </b-row>
-        
+
         <div class="body">
             <transition name="fade" mode="out-in">
-                <router-view />
+                <router-view/>
             </transition>
         </div>
 
         <b-row>
-            <b-col>
-        <div id="footer" style="height: 150px; width: 100%; background: #1b1e21; padding-top: 40px;" class="text-center">
+            <b-col class="px-0">
+        <div id="footer" style="height: 150px; width: 100%; background: #1b1e21; padding-top: 40px;"
+             class="text-center">
             <p>Website by Dillon DuPont and Morgan Dean</p>
-            <p>© Vast Storytelling 2019</p>
+            <router-link to="/"><p>© Vast Storytelling 2019</p></router-link>
         </div>
             </b-col>
         </b-row>
@@ -30,21 +31,28 @@
 <script>
 	export default {
 		name: 'App',
-		data() {
-            return {}
-		},
-		methods: {},
-        mounted() {
-			if (this.$router.currentRoute.name !== 'Home') {
-				document.getElementById('nav').setAttribute('style', 'opacity: 1; position: sticky;');
-			}
-		}
 	}
 </script>
 
 <style lang="scss">
     .body {
         min-height: calc(100vh - 217px);
+    }
+
+    @media only screen and (max-width: 992px) {
+        .hide-on-med-and-down {
+            display: none !important;
+        }
+
+        .show-on-med-and-down {
+            display: initial !important;
+        }
+    }
+
+    @media only screen and (min-width: 993px) {
+        .hide-on-med-and-up {
+            display: none !important;
+        }
     }
 
     body {

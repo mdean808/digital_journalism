@@ -43,7 +43,7 @@ export default new Vuex.Store({
 		videos: [
 			{
 				id: '0',
-				title: 'C A P P A D O C I A',
+				title: 'CAPPADOCIA',
 				url: 'https://www.youtube.com/watch?v=RdoGRjqJxbk',
 				desc: 'Balloons',
 				author: '0'
