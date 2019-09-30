@@ -1,6 +1,6 @@
 <template>
     <div class="layout">
-        <div class="thumbnails">
+        <div class="thumbnails hide-on-med-and-down">
             <photo-thumbnail v-for="(photo, i) in photos" :key="i" width="100%" height="200px" :title="photo.title" :desc="photo.desc" :url="photo.url"/>
         </div>
         <div class="video">
@@ -20,6 +20,9 @@
                 <div style="width: 50%; height: 2px; background-color: #b9b9b9; margin: auto"></div>
                 <p class="text-white-50" style="margin-top: 5px">{{photo.author.bio}}</p>
             </div>
+        </div>
+        <div class="thumbnails show-on-med-and-down hide-on-med-and-up">
+            <photo-thumbnail v-for="(photo, i) in photos" :key="i" width="100%" height="200px" :title="photo.title" :desc="photo.desc" :url="photo.url"/>
         </div>
     </div>
 </template>
@@ -57,6 +60,26 @@
         display: grid;
         grid-template-columns: .5fr 2fr .6fr;
         padding: 40px 0 40px 40px;
+    }
+
+    @media only screen and (max-width: 992px) {
+        .layout {
+            grid-template-columns: 1fr;
+            grid-template-rows: 2.75fr 1.5fr 2fr;
+            padding: 40px;
+        }
+        .hide-on-med-and-down {
+            display: none !important;
+        }
+        .show-on-med-and-down {
+            display: initial !important;
+        }
+    }
+    @media only screen and (min-width: 993px) {
+
+        .hide-on-med-and-up {
+            display: none !important;
+        }
     }
 
     .profile {

@@ -12,7 +12,7 @@
         <transition name="fade" mode="out-in">
             <router-view/>
         </transition>
-        <div id="footer" style="height: 150px; width: 100%; background: #1b1e21; padding-top: 40px; position: fixed; bottom: 0" class="text-center">
+        <div id="footer" style="height: 150px; width: 100%; background: #1b1e21; padding-top: 40px;bottom: 0" class="text-center">
             <p>Website by Morgan Dean and Dillon DuPont</p>
             <p>© Vast Storytelling 2019</p>
         </div>

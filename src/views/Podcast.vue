@@ -1,10 +1,10 @@
 <template>
     <div class="layout">
-        <div class="thumbnails my-1">
+        <div class="thumbnails my-1 hide-on-med-and-down">
             <SoundCloudThumbnail v-for="(podcast, i) in podcasts" :key="i" width="100%" height="200px" :title="podcast.title" :desc="podcast.desc" :url="podcast.imgLink"/>
         </div>
         <div class="video mr-5">
-            <SoundcloudEmbed class="my-1" width="100%" height="200px" :url="podcast.trackId"/>
+            <SoundCloudEmbed class="my-1" width="100%" height="200px" :url="podcast.trackId"/>
             <b-card :title="podcast.title" class="text-dark">
                 <p>{{podcast.desc}}</p>
             </b-card>
@@ -12,7 +12,7 @@
         <div class="profile">
             <b-card class="m-1 text-dark my-0">
                 <div class="avatar">
-                    <img alt="Person's Photo" src="https://yt3.ggpht.com/a/AGF-l78tH1rjkg_zfpHhS_AL_N4dw5JFbezH5AWpwQ=s176-c-k-c0xffffffff-no-rj-mo">
+                    <img alt="Person's Photo" :src="podcast.author.avatar">
                 </div>
                 <div class="bio">
                     <h3>{{podcast.author.name}}</h3>
@@ -20,6 +20,9 @@
                     <p class="text-black-50" style="margin-top: 5px">{{podcast.author.bio}}</p>
                 </div>
             </b-card>
+        </div>
+        <div class="thumbnails my-1 show-on-med-and-down hide-on-med-and-up">
+            <SoundCloudThumbnail v-for="(podcast, i) in podcasts" :key="i" width="100%" height="200px" :title="podcast.title" :desc="podcast.desc" :url="podcast.imgLink"/>
         </div>
     </div>
 </template>
@@ -55,6 +58,26 @@
         display: grid;
         grid-template-columns: .5fr 2fr .6fr;
         padding: 40px 0 40px 40px;
+    }
+
+    @media only screen and (max-width: 992px) {
+        .layout {
+            grid-template-columns: 1fr;
+            grid-template-rows: 1.5fr 2fr 2fr;
+            padding: 40px;
+        }
+        .hide-on-med-and-down {
+            display: none !important;
+        }
+        .show-on-med-and-down {
+            display: initial !important;
+        }
+    }
+    @media only screen and (min-width: 993px) {
+
+        .hide-on-med-and-up {
+            display: none !important;
+        }
     }
 
     .profile {

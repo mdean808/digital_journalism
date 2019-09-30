@@ -10,7 +10,7 @@ export default new Vuex.Store({
 				id: '0',
 				name: 'Ry Bleckel',
 				email: 'rbleckel@hpa.edu',
-				bio: 'Filmer, Photographer, Musician',
+				bio: 'Videographer, Photographer, Musician',
 				avatar: 'http://norapc.org/wp-content/uploads/2015/07/avatar-blank.png',
 				videos: ['0'],
 				podcasts: [],
