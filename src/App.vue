@@ -1,6 +1,6 @@
 <template>
-    <div id="app">
-        <b-row id="nav" class="fixed-top py-2 mt-2" style="position: absolute;">
+    <b-container fluid id="app">
+        <b-row id="nav" class="fixed-top py-2 mt-2" style="position: absolute; width: 100vw">
             <b-col class="text-center navvy">
                 <router-link to="/photos">photos</router-link>
                 <router-link to="/videos">videos</router-link>
@@ -15,11 +15,16 @@
                 <router-view />
             </transition>
         </div>
+
+        <b-row>
+            <b-col>
         <div id="footer" style="height: 150px; width: 100%; background: #1b1e21; padding-top: 40px;" class="text-center">
             <p>Website by Dillon DuPont and Morgan Dean</p>
             <p>© Vast Storytelling 2019</p>
         </div>
-    </div>
+            </b-col>
+        </b-row>
+    </b-container>
 </template>
 
 <script>
