@@ -11,6 +11,15 @@ Vue.config.productionTip = false;
 
 new Vue({
 	router,
+	watch: {
+		$route: (to) => {
+			if (to.name === 'Home') {
+				document.getElementById('nav').setAttribute('style', 'opacity: 0; position: absolute;');
+			} else {
+				document.getElementById('nav').setAttribute('style', 'opacity: 1; position: sticky;');
+			}
+		}
+	},
 	store,
 	render: h => h(App)
 }).$mount('#app');

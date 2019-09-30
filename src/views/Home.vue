@@ -1,13 +1,13 @@
 <template>
-  <div>
-    <Box parallax 
-      box-class="text-center" 
-      box-style="padding-top: 200px !important; padding-bottom: 150px !important;" 
-      header="VAST" header-style='
+    <div>
+        <Box parallax
+             box-class="text-center"
+             box-style="padding-top: 200px !important; padding-bottom: 150px !important;"
+             header="VAST" header-style='
             font-weight: 200;
             letter-spacing: 10px;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, 
-                        "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                        "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
                         "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";'
       image="/images/images.jpeg"
       />
@@ -47,14 +47,24 @@
 </style>
 
 <script>
-// @ is an alias to /src
+	// @ is an alias to /src
 
-import Box from '@/components/Box.vue'
+	import Box from '@/components/Box.vue'
 
-export default {
-  name: 'home',
-  components: {
-    Box
-  }
-}
+	export default {
+		name: 'home',
+		components: {
+			Box
+		},
+		mounted() {
+			window.addEventListener('scroll', function () {
+				if (window.scrollY > 400) {
+					document.getElementById('nav').setAttribute('style', 'opacity: 1; position: fixed;');
+				}
+				if (window.scrollY < 400) {
+					document.getElementById('nav').setAttribute('style', 'opacity: 0; position: fixed;');
+				}
+			});
+		}
+	}
 </script>
