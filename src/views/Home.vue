@@ -2,48 +2,49 @@
     <div>
         <Box parallax
              box-class="text-center"
-             box-style="padding-top: 200px !important; padding-bottom: 150px !important;"
+             box-style="padding-top: 200px !important; padding-bottom: 150px !important; height: 100vh"
              header="VAST" header-style='
             font-weight: 200;
             letter-spacing: 10px;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
                         "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
                         "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";'
-      image="/images/images.jpeg"
-      />
+      image="/images/images.jpeg">
+        <a href="#content" class="btn btn-outline-light">DISCOVER VAST CONTENT</a>
+      </Box>
 
-    <b-row>
+    <b-row id="content">
       <b-col cols="4">
-        <Box hover color="#6fc3df" body="custom text 1" />
+        <router-link to="/photos">
+          <Box hover color="#6fc3df" header="Photos" body="look at amazing photos" image="https://live.staticflickr.com/2813/33706635605_3447401c73_b.jpg" parallax />
+        </router-link>
       </b-col>
       <b-col>
-        <Box hover color="#8d82c4">
-          <p>Some custom <b>HTML</b></p>
-        </Box>
+        <router-link to="/videos">
+          <Box hover color="#8d82c4" header="Videos" body="spectate neat videos" image="https://cdn.pixabay.com/photo/2017/11/28/13/10/maui-2983620_960_720.jpg" parallax />
+        </router-link>
       </b-col>
     </b-row>
     <b-row>
       <b-col cols="8">
-        <Box hover color="#ec8d81" />
+        <router-link to="/podcasts">
+          <Box hover color="#ec8d81" header="Podcasts" body="feast your ears on captivating podcasts" />
+        </router-link>
       </b-col>
       <b-col>
-        <Box hover color="#e7b788" />
-      </b-col>
-    </b-row>
-    <b-row>
-      <b-col cols="4">
-        <Box hover color="#8ea9e8" />
-      </b-col>
-      <b-col>
-        <Box hover color="#87c5a4" />
+        <router-link to="/articles">
+          <Box hover color="#e7b788" header="Articles" body="read some interesting texts" />
+        </router-link>
       </b-col>
     </b-row>
     <Box box-style="padding-top: 150px !important; padding-bottom: 150px !important;" />
   </div>
 </template>
 
-<style scoped>
-
+<style>
+html {
+  scroll-behavior: smooth;
+}
 </style>
 
 <script>

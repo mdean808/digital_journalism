@@ -26,7 +26,7 @@ export default new Vuex.Store({
 			id: '0',
 			title: 'Sacha Rogan Experience #1',
 			trackId: '34019569',
-			desc: 'Filmed at ur mums house in turkey (B A L L O O N S)',
+			desc: 'Filmed in sachas garage (ft Ry)',
 			author: '0'
 		}],
 		articles: [],
