@@ -42,6 +42,10 @@
 </template>
 
 <style>
+#nav {
+        opacity: 0;
+}
+
 html {
   scroll-behavior: smooth;
 }
