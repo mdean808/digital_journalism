@@ -3,7 +3,7 @@
         <Box parallax
              box-class="text-center"
              box-style="padding-top: 200px !important; padding-bottom: 150px !important; height: 100vh"
-             header="VAST" header-style='
+             header="Our Journey" header-style='
             font-weight: 200;
             letter-spacing: 10px;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
@@ -43,7 +43,7 @@
 
 <style>
 #nav {
-        opacity: 0;
+        /* opacity: 0; */
 }
 
 html {
@@ -62,6 +62,7 @@ html {
 			Box
 		},
 		mounted() {
+      /*
 			window.addEventListener('scroll', function () {
 				if (window.scrollY > 400) {
 					document.getElementById('nav').setAttribute('style', 'opacity: 1; position: fixed;');
@@ -69,7 +70,8 @@ html {
 				if (window.scrollY < 400) {
 					document.getElementById('nav').setAttribute('style', 'opacity: 0; position: fixed;');
 				}
-			});
+      });
+      */
 		}
 	}
 </script>
