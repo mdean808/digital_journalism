@@ -1,7 +1,7 @@
 <template>
     <div class="layout">
         <div class="thumbnails">
-            <video-thumbnail v-for="(video, i) in videos" :key="i" width="100%" height="200px" :title="video.title" :desc="video.desc" :url="video.url"/>
+            <video-thumbnail v-for="(video, i) in videos" :key="i" :id="video.id" width="100%" height="200px" :title="video.title" :desc="video.desc" :url="video.url"/>
         </div>
         <div class="video">
             <VideoEmbed width="100%" height="35vw" :url="video.url"/>
@@ -35,14 +35,19 @@
 			VideoEmbed
 		},
 
-		beforeMount() {
+		async beforeMount() {
 			const id = this.$route.query.id;
 			if (!id) return this.$router.push('/videos');
 			this.video = this.$store.getters.video(this.$route.query.id);
             this.video.author = this.$store.getters.person(this.video.author);
 
             this.videos = this.$store.getters.videos();
-		}
+			document.getElementById('nav').setAttribute('style', 'opacity: 1; position: sticky;');
+
+		},
+		mounted() {
+			document.getElementById('nav').setAttribute('style', 'opacity: 1; position: sticky;');
+		},
 	}
 </script>
 

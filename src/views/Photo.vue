@@ -44,7 +44,11 @@
 			this.photo.author = this.$store.getters.person(this.photo.author);
 
 			this.photos = this.$store.getters.photos();
-		}
+
+		},
+		mounted() {
+			document.getElementById('nav').setAttribute('style', 'opacity: 1; position: sticky;');
+		},
 	}
 </script>
 

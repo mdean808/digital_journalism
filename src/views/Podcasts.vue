@@ -1,20 +1,30 @@
 <template>
     <div>
         <b-container>
-        <b-row>
-            <Box hover color="#ad8e30"/>
-        </b-row>
-    </b-container>
+            <b-row>
+                <Box v-for="(podcast, i) of podcasts" :key="i" hover color="#96880c"
+                     :image="podcast.url" :header="podcast.title" :body="podcast.desc"
+                     :link="`/podcast?id=${podcast.id}`"/>
+            </b-row>
+        </b-container>
     </div>
 </template>
 
 <script>
-    import Box from '../components/Box'
+	import Box from '../components/Box'
+
 	export default {
-		name: "Videos",
-        components: {
+		name: "Podcasts",
+		components: {
 			Box
-        }
+		},
+		beforeMount() {
+			this.podcasts = this.$store.getters.podcasts();
+			document.getElementById('nav').setAttribute('style', 'opacity: 1; position: sticky;');
+		},
+		mounted() {
+			document.getElementById('nav').setAttribute('style', 'opacity: 1; position: sticky;');
+		},
 	}
 </script>
 

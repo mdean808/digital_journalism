@@ -1,6 +1,6 @@
 <template>
-    <b-row class="box" :style="cssProps">
-        <b-col :class="'px-5 py-5 content ' + boxClass" :style="boxStyle" >
+    <b-row class="box" :style="cssProps" @click="goto(link)">
+        <b-col :class="'px-5 py-5 content ' + boxClass" :style="boxStyle">
             <h1 :style="headerStyle">{{header}}</h1>
             <slot>
                 <p>{{body}}</p>
@@ -10,37 +10,44 @@
 </template>
 
 <script>
-export default {
-    props: {
-        'color': String,
-        'image': String,
-        'box-style': String,
-        'box-class': String,
-        'header-style': String,
-        'header': {
-            type: String,
-            default: 'Bruh.'
-        },
-        'body': {
-            type: String,
-            default: 'This is a bruh moment'
-        }
-    },
-    computed: {
-        cssProps() { return {
-            '--bg-color': this.color || '#242943',
-            '--bg-image': `url(${this.image})`,
-            }
-        }
-    }
-}
+	export default {
+		props: {
+			'color': String,
+			'image': String,
+			'link': String,
+			'box-style': String,
+			'box-class': String,
+			'header-style': String,
+			'header': {
+				type: String,
+				default: 'Bruh.'
+			},
+			'body': {
+				type: String,
+				default: 'This is a bruh moment'
+			}
+		},
+		computed: {
+			cssProps() {
+				return {
+					'--bg-color': this.color || '#242943',
+					'--bg-image': `url(${this.image})`,
+				}
+			}
+		},
+		methods: {
+			goto(link) {
+				this.$router.push(link)
+			}
+		}
+	}
 </script>
 
 <style scoped>
     .box {
         color: white;
-
-        background-image: var(--bg-image);;
+        cursor: pointer;
+        background-image: var(--bg-image);
         background-position: center;
         background-size: cover;
     }

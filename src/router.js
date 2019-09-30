@@ -10,6 +10,8 @@ import Podcast from './views/Podcast.vue'
 import Podcasts from './views/Podcasts.vue'
 import Photo from './views/Photo.vue'
 import Photos from './views/Photos.vue'
+import Article from "./views/Article";
+import Articles from "./views/Articles";
 Vue.use(Router);
 
 
@@ -56,6 +58,16 @@ export default new Router({
 			path: '/photos',
 			name: 'Photos',
 			component: Photos
-		}
+		},
+		{
+			path: '/article',
+			name: 'Article',
+			component: Article
+		},
+		{
+			path: '/Articles',
+			name: 'Articles',
+			component: Articles
+		},
 	]
 })

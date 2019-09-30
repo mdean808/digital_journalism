@@ -1,5 +1,5 @@
 <template>
-    <div class="thumb">
+    <div class="thumb" @click="goto(id)">
         <img :alt="`Thumbnail for ${url}`" :style="{width: width, height: height}"
              :src="`https://img.youtube.com/vi/${videoId}/0.jpg`">
         <div class="desc">
@@ -12,7 +12,7 @@
 <script>
 	export default {
 		name: "VideoThumbnail",
-		props: ['url', 'width', 'height', 'title', 'desc'],
+		props: ['url', 'width', 'height', 'title', 'desc', 'id'],
 		data() {
 			return {
 				videoId: this.getId()
@@ -30,7 +30,10 @@
 				if (!results) return null;
 				if (!results[2]) return '';
 				return decodeURIComponent(results[2].replace(/\+/g, ' '));
-			}
+			},
+            goto(id) {
+				this.$router.push(`/video?id=${id}`)
+            }
 		}
 	}
 </script>
@@ -38,6 +41,7 @@
 <style lang="scss" scoped>
 
     .thumb:hover {
+        height: 200px;
         .desc {
             transform: scale(1.05);
         }
