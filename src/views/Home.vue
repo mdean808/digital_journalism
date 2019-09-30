@@ -9,8 +9,8 @@
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
                         "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
                         "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";'
-      image="/images/images.jpeg">
-        <a href="#content" class="btn btn-outline-light">DISCOVER VAST CONTENT</a>
+      image="/img/vast.png">
+        <a href="#content" class="btn btn-outline-light">DISCOVER VAST STORYTELLING</a>
       </Box>
 
     <b-row id="content">
@@ -37,7 +37,7 @@
         </router-link>
       </b-col>
     </b-row>
-    <Box box-style="padding-top: 150px !important; padding-bottom: 150px !important;" />
+    <Box box-style="padding-top: 150px !important; padding-bottom: 150px !important; text-align: center" header="A Storytelling hub" body="Content by Digital Journalism students of '19" />
   </div>
 </template>
 
@@ -60,7 +60,7 @@ html {
 		mounted() {
 			window.addEventListener('scroll', function () {
 				if (window.scrollY > 400) {
-					document.getElementById('nav').setAttribute('style', 'opacity: 1; position: fixed;');
+					document.getElementById('nav').setAttribute('style', 'opacity: 0; position: fixed;');
 				}
 				if (window.scrollY < 400) {
 					document.getElementById('nav').setAttribute('style', 'opacity: 0; position: fixed;');
