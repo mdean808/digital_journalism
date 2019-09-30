@@ -2,8 +2,8 @@
     <div>
         <b-container>
             <b-row>
-                <Box v-for="(video, i) of videos" :key="i" hover color="#6fc3df"
-                     :image="`https://img.youtube.com/vi/${video.yt_id}/0.jpg`" :header="video.title" :body="video.desc"
+                <Box v-for="(video, i) of videos" style="width: 100%" :key="i" hover color="#6fc3df"
+                     :image="`https://img.youtube.com/vi/${video.yt_id}/maxresdefault.jpg`" :header="video.title" :body="video.desc"
                      :link="`/video?id=${video.id}`"/>
             </b-row>
         </b-container>

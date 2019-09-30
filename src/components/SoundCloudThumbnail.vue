@@ -15,7 +15,7 @@
 		props: ['url', 'width', 'height', 'title', 'desc', 'id'],
         methods: {
 			goto(id) {
-				this.$router.push(`/podcast?id=${id}`)
+				if (id) this.$router.push(`/podcast?id=${id}`)
 			}
         }
 	}
@@ -31,6 +31,7 @@
 
     .thumb {
         cursor: pointer;
+        margin: 20px;
     }
 
     .desc {

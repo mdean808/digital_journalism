@@ -25,10 +25,6 @@
                     </div>
                 </b-card>
             </b-col>
-            <!--<div class="thumbnails show-on-med-and-down hide-on-med-and-up">
-                <video-thumbnail v-for="(video, i) in videos" :key="i" :id="video.id" width="100%" height="200px"
-                                 :title="video.title" :desc="video.desc" :url="video.url"/>
-            </div>-->
         </b-row>
         <b-row class="hide-on-med-and-up show-on-med-and-down" style="margin: auto;">
             <VideoEmbed width="100%" height="50vw" :url="video.url"/>

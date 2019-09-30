@@ -32,7 +32,7 @@
 				return decodeURIComponent(results[2].replace(/\+/g, ' '));
 			},
             goto(id) {
-				this.$router.push(`/video?id=${id}`)
+				if (id) this.$router.push(`/video?id=${id}`)
             }
 		}
 	}
@@ -49,6 +49,7 @@
 
     .thumb {
         cursor: pointer;
+        margin: 20px;
     }
 
     .desc {
