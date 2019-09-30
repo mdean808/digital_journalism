@@ -5,7 +5,7 @@
                                  :title="podcast.title" :desc="podcast.desc" :url="podcast.imgLink"/>
         </div>
         <div class="video mr-5">
-            <SoundCloudEmbed class="my-1" width="100%" height="200px" :url="podcast.trackId"/>
+            <SoundCloudEmbed class="my-1" width="100%" height="200px" :url="podcast.url"/>
             <b-card :title="podcast.title" class="text-dark">
                 <p>{{podcast.desc}}</p>
             </b-card>
