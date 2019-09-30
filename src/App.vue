@@ -1,6 +1,6 @@
 <template>
     <div id="app">
-        <b-row id="nav" class="fixed-top py-2">
+        <b-row id="nav" class="fixed-top py-2" style="position: sticky;">
             <b-col class="text-center navvy">
                 <router-link to="/photos">photos</router-link>
                 <router-link to="/videos">videos</router-link>
@@ -19,18 +19,24 @@
 	export default {
 		name: 'App',
 		data() {
-			return {}
+            return {}
 		},
 		methods: {},
+        //todo: make this run every time a router is switched
+
 		mounted() {
-			window.addEventListener('scroll', function () {
-				if (window.scrollY > 400) {
-					document.getElementById('nav').setAttribute('style', 'opacity: 1');
-				}
-				if (window.scrollY < 400) {
-					document.getElementById('nav').setAttribute('style', 'opacity: 0');
-				}
-			})
+			if (this.$router.currentRoute.name === 'Home') {
+				window.addEventListener('scroll', function () {
+					if (window.scrollY > 400) {
+						document.getElementById('nav').setAttribute('style', 'opacity: 1');
+					}
+					if (window.scrollY < 400) {
+						document.getElementById('nav').setAttribute('style', 'opacity: 0');
+					}
+				});
+			} else {
+				document.getElementById('nav').setAttribute('style', 'opacity: 1');
+            }
 		}
 	}
 </script>
@@ -41,7 +47,8 @@
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         text-align: center;
-        color: #2c3e50;
+        color: white !important;
+        background-color: #242943 !important;
     }
 
     a {
