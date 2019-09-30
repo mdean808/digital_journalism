@@ -35,15 +35,12 @@
 
     .desc {
         transition: .5s all;
-        padding: 3px;
-        background-color: white;
-        color: black;
-        height: 50px;
+        padding: 2px;
+        background-color: #fff;
+        color: #000;
         position: relative;
-        margin-top: -70px;
-        margin-left: 30px;
-        margin-right: 20px;
-        width: 210px;
+        margin: -60px auto 0 auto;
+        width: 80%;
 
         p {
             font-weight: 500;

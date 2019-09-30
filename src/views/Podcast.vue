@@ -1,7 +1,7 @@
 <template>
     <div class="layout">
         <div class="thumbnails my-1 hide-on-med-and-down">
-            <SoundCloudThumbnail v-for="(podcast, i) in podcasts" :key="i" width="100%" height="200px" :id="podcast.id"
+            <SoundCloudThumbnail v-for="(podcast, i) in podcasts" :key="i" width="100%" height="150px" :id="podcast.id"
                                  :title="podcast.title" :desc="podcast.desc" :url="podcast.imgLink"/>
         </div>
         <div class="video mr-5">

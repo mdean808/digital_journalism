@@ -1,32 +1,58 @@
 <template>
-    <div>
-        <b-row>
-            <b-col cols="2" class="hide-on-med-and-down">
+    <div class="template">
+        <b-row class="hide-on-med-and-down">
+            <b-col cols="2">
                 <video-thumbnail v-for="(video, i) in videos" :key="i" :id="video.id" width="100%" height="200px"
                                  :title="video.title" :desc="video.desc" :url="video.url"/>
             </b-col>
-            <b-col cols="8" >
+            <b-col cols="8">
                 <VideoEmbed width="100%" height="35vw" :url="video.url"/>
-                <div class="desc text-center">
+                <b-card class="text-dark text-center">
                     <h1>{{video.title}}</h1>
-                    <div style="width: 50%; height: 2px; background-color: #b9b9b9; margin: 5px auto 10px auto"></div>
-                    <p class="text-white-50">{{video.desc}}</p>
-                </div>
+                    <div style="width: 50%; height: 2px; background-color: #b9b9b9; margin: auto"></div>
+                    <p style="margin-top: 10px">{{video.desc}}</p>
+                </b-card>
             </b-col>
             <b-col cols="2" class="profile">
+                <b-card class="m-1 text-dark my-0">
+                    <div class="avatar">
+                        <img alt="Person's Photo" :src="author.avatar">
+                    </div>
+                    <div class="bio">
+                        <h3>{{author.name}}</h3>
+                        <div style="width: 50%; height: 2px; background-color: #b9b9b9; margin: auto"></div>
+                        <p class="text-black-50" style="margin-top: 5px">{{author.bio}}</p>
+                    </div>
+                </b-card>
+            </b-col>
+            <!--<div class="thumbnails show-on-med-and-down hide-on-med-and-up">
+                <video-thumbnail v-for="(video, i) in videos" :key="i" :id="video.id" width="100%" height="200px"
+                                 :title="video.title" :desc="video.desc" :url="video.url"/>
+            </div>-->
+        </b-row>
+        <b-row class="hide-on-med-and-up show-on-med-and-down" style="margin: auto;">
+            <VideoEmbed width="100%" height="50vw" :url="video.url"/>
+            <b-card class="text-dark text-center">
+                <h1>{{video.title}}</h1>
+                <div style="width: 50%; height: 2px; background-color: #b9b9b9; margin: auto"></div>
+                <p style="margin-top: 10px">{{video.desc}}</p>
+            </b-card>
+        </b-row>
+        <b-row class="hide-on-med-and-up show-on-med-and-down">
+            <b-card class="m-1 text-dark my-0">
                 <div class="avatar">
                     <img alt="Person's Photo" :src="author.avatar">
                 </div>
                 <div class="bio">
                     <h3>{{author.name}}</h3>
                     <div style="width: 50%; height: 2px; background-color: #b9b9b9; margin: auto"></div>
-                    <p class="text-white-50" style="margin-top: 5px">{{author.bio}}</p>
+                    <p class="text-black-50" style="margin-top: 5px">{{author.bio}}</p>
                 </div>
-            </b-col>
-            <!--<div class="thumbnails show-on-med-and-down hide-on-med-and-up">
-                <video-thumbnail v-for="(video, i) in videos" :key="i" :id="video.id" width="100%" height="200px"
-                                 :title="video.title" :desc="video.desc" :url="video.url"/>
-            </div>-->
+            </b-card>
+        </b-row>
+        <b-row class="hide-on-med-and-up show-on-med-and-down">
+            <video-thumbnail v-for="(video, i) in videos" :key="i" :id="video.id" style="width: 70%; margin: auto" width="100%" height="200px"
+                             :title="video.title" :desc="video.desc" :url="video.url"/>
         </b-row>
     </div>
 </template>
@@ -80,6 +106,10 @@
         .hide-on-med-and-up {
             display: none !important;
         }
+    }
+
+    .template {
+        margin: 5px 5px 40px 5px;
     }
 
     .profile {
