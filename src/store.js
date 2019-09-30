@@ -38,6 +38,17 @@ export default new Vuex.Store({
 				podcasts: [],
 				articles: [],
 				photos: ['0']
+			},
+			{
+				id: '3',
+				name: 'May-J Bui',
+				email: 'hbui@hpa.edu',
+				avatar: 'http://norapc.org/wp-content/uploads/2015/07/avatar-blank.png',
+				bio: 'Podcaster',
+				videos: [],
+				podcasts: ['1'],
+				articles: [],
+				photos: []
 			}
 		],
 		videos: [
@@ -57,6 +68,14 @@ export default new Vuex.Store({
 				imgLink: 'https://www.irishexaminer.com/remote/media.central.ie/media/images/p/PodcastCornerLogo_large.jpg',
 				desc: 'This podcast features Ry Bleckel telling his story about the struggles he has experienced in baseball season these last couple of years.',
 				author: '1'
+			},
+			{
+				id: '1',
+				title: 'Title',
+				trackId: '34019569',
+				imgLink: 'https://www.irishexaminer.com/remote/media.central.ie/media/images/p/PodcastCornerLogo_large.jpg',
+				desc: 'Most of the time, it\'s hard to be honest with yourself about who you are and present your authentic true self to the world, but to be able to have the courage to tell the world that you\'re hiding yourself, that\'s even harder.\n',
+				author: '3'
 			}
 		],
 		articles: [],

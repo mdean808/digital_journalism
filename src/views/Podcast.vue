@@ -1,7 +1,8 @@
 <template>
     <div class="layout">
         <div class="thumbnails my-1 hide-on-med-and-down">
-            <SoundCloudThumbnail v-for="(podcast, i) in podcasts" :key="i" width="100%" height="200px" :title="podcast.title" :desc="podcast.desc" :url="podcast.imgLink"/>
+            <SoundCloudThumbnail v-for="(podcast, i) in podcasts" :key="i" width="100%" height="200px" :id="podcast.id"
+                                 :title="podcast.title" :desc="podcast.desc" :url="podcast.imgLink"/>
         </div>
         <div class="video mr-5">
             <SoundCloudEmbed class="my-1" width="100%" height="200px" :url="podcast.trackId"/>
@@ -22,7 +23,8 @@
             </b-card>
         </div>
         <div class="thumbnails my-1 show-on-med-and-down hide-on-med-and-up">
-            <SoundCloudThumbnail v-for="(podcast, i) in podcasts" :key="i" width="100%" height="200px" :title="podcast.title" :desc="podcast.desc" :url="podcast.imgLink"/>
+            <SoundCloudThumbnail v-for="(podcast, i) in podcasts" :key="i" width="100%" height="200px" :id="podcast.id"
+                                 :title="podcast.title" :desc="podcast.desc" :url="podcast.imgLink"/>
         </div>
     </div>
 </template>
@@ -37,16 +39,49 @@
 			SoundCloudThumbnail,
 			SoundCloudEmbed
 		},
-
-		beforeMount() {
-			const id = this.$route.query.id;
-			if (!id) return this.$router.push('/podcasts');
-            this.podcast = this.$store.getters.podcast(this.$route.query.id);
-            console.log(this.podcast.trackId);
-            this.podcast.author = this.$store.getters.person(this.podcast.author);
-
-            this.podcasts = this.$store.getters.podcasts();
+		data() {
+			return {
+				podcast: {
+					id: '-1',
+					title: 'Loading...',
+					trackId: '34019569',
+					imgLink: 'https://www.irishexaminer.com/remote/media.central.ie/media/images/p/PodcastCornerLogo_large.jpg',
+					desc: 'Loading...',
+					author: {
+						id: '-1',
+						name: 'Loading...',
+						email: 'Loading...',
+						avatar: 'http://norapc.org/wp-content/uploads/2015/07/avatar-blank.png',
+						bio: 'Loading...',
+						videos: [],
+						podcasts: [],
+						articles: [],
+						photos: []
+					}
+				},
+				podcasts: []
+			}
 		},
+
+		mounted() {
+			this.fetchData();
+		},
+		watch: {
+			// call again the method if the route changes
+			$route: 'fetchData'
+		},
+		methods: {
+			fetchData() {
+				console.log('Fetching Data');
+				const id = this.$route.query.id;
+				if (!id) return this.$router.push('/podcasts');
+				this.podcast = this.$store.getters.podcast(this.$route.query.id);
+				console.log(this.podcast.trackId);
+				this.podcast.author = this.$store.getters.person(this.podcast.author);
+
+				this.podcasts = this.$store.getters.podcasts();
+			}
+		}
 
 	}
 </script>
@@ -71,6 +106,7 @@
             display: initial !important;
         }
     }
+
     @media only screen and (min-width: 993px) {
 
         .hide-on-med-and-up {
@@ -103,6 +139,7 @@
 
     .avatar {
         text-align: center;
+
         img {
             border-radius: 100px;
             width: 150px;
@@ -111,6 +148,7 @@
             text-align: center;
         }
     }
+
     .bio {
         padding: 10px;
         text-align: center;

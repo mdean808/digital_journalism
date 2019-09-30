@@ -1,5 +1,5 @@
 <template>
-    <div class="thumb">
+    <div class="thumb" @click="goto(id)">
         <img :alt="`Thumbnail for ${url}`" :style="{width: width, height: height}"
              :src="url">
         <div class="desc">
@@ -12,7 +12,12 @@
 <script>
 	export default {
 		name: "SoundCloudThumbnail",
-		props: ['url', 'width', 'height', 'title', 'desc'],
+		props: ['url', 'width', 'height', 'title', 'desc', 'id'],
+        methods: {
+			goto(id) {
+				this.$router.push(`/podcast?id=${id}`)
+			}
+        }
 	}
 </script>
 

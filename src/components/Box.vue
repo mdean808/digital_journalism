@@ -72,6 +72,9 @@
 
     .box[hover]:hover .content:before {
         opacity: 0.5;
+    }
+
+    .box[hover] {
         cursor: pointer;
     }
 
