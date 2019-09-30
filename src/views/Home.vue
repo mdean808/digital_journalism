@@ -84,6 +84,7 @@
 <style>
     #nav {
         /* opacity: 0; */
+        width: calc(100vw - 15px);
     }
 
     html {
@@ -101,6 +102,9 @@
 		components: {
 			Box
 		},
+		mounted() {
+			document.getElementById('nav').setAttribute('style', 'opacity: 1; position: absolute;');
+		}
 	}
 </script>
 

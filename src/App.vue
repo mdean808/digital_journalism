@@ -1,6 +1,6 @@
 <template>
     <b-container fluid id="app">
-        <b-row id="nav" class="fixed-top py-2 mt-2" style="position: absolute; width: 100vw; margin: auto;">
+        <b-row id="nav" class="py-2 mt-2" style="/* position: absolute; */ width: 100vw; margin: auto;">
             <b-col class="text-center navvy">
                 <router-link to="/photos">photos</router-link>
                 <router-link to="/videos">videos</router-link>
