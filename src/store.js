@@ -85,7 +85,7 @@ export default new Vuex.Store({
 				title: 'MAKE A CHANGE',
 				desc: 'The world is absolutely amazing and filled with a vast variety of beautiful places, but it is not going to stay this way for long. Global warming and pollution are ultimately going to change this world in the utmost negative way. Our overall message is to utilize our youth and make you see the bigger picture.',
 				author: '2',
-				url: './img/photo-0.jpg'
+				url: '/img/photo-0.jpg'
 			}
 		],
 	},
