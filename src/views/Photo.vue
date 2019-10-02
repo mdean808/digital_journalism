@@ -2,51 +2,42 @@
     <div class="template">
         <b-row class="hide-on-med-and-down">
             <b-col cols="2">
-                <photo-thumbnail v-for="(photo, i) in photos" :key="i" width="100%" height="200px" :title="photo.title" :desc="photo.desc" :url="photo.url"/>
+                <photo-thumbnail v-for="(photo, i) in photos" :key="i" width="100%" height="9vw" :title="photo.title"
+                                 :desc="photo.desc" :url="photo.url"/>
             </b-col>
             <b-col cols="8">
                 <img alt="Photo Alternate" style="width: 100%; height: 35vw" :src="photo.url"/>
-                <b-card class="text-dark text-center" style="margin: 20px 0">
+                <div class="text-light text-center" style="margin: 20px 0">
                     <h1>{{photo.title}}</h1>
-                    <div style="width: 50%; height: 2px; background-color: #b9b9b9; margin: auto"></div>
+                    <div style="width: 50%; height: 2px; background-color: #b0b0b0; margin: auto"></div>
                     <p style="margin-top: 10px">{{photo.desc}}</p>
-                </b-card>
+                </div>
             </b-col>
             <b-col cols="2" class="profile">
-                <b-card class="m-1 text-dark my-0">
+                <div class="m-1 text-light my-0">
                     <div class="avatar">
                         <img alt="Person's Photo" :src="author.avatar">
                     </div>
                     <div class="bio">
                         <h3>{{author.name}}</h3>
                         <div style="width: 50%; height: 2px; background-color: #b9b9b9; margin: auto"></div>
-                        <p class="text-black-50" style="margin-top: 5px">{{author.bio}}</p>
+                        <p class="text-light" style="margin-top: 5px">{{author.bio}}</p>
                     </div>
-                </b-card>
+                </div>
             </b-col>
         </b-row>
         <b-row class="hide-on-med-and-up show-on-med-and-down" style="margin: auto;">
             <img alt="Photo Alternate" style="width: 100%; height: 60vw" :src="photo.url"/>
-            <b-card class="text-dark text-center" style="margin-top: 30px">
+            <div class="text-light text-center" style="margin-top: 30px">
                 <h1>{{photo.title}}</h1>
-                <div style="width: 50%; height: 2px; background-color: #b9b9b9; margin: auto"></div>
+                <p style="color: #bbbbbb">By {{author.name}}</p>
+                <div style="width: 50%; height: 2px; background-color: #b0b0b0; margin: auto"></div>
                 <p style="margin-top: 10px">{{photo.desc}}</p>
-            </b-card>
+            </div>
         </b-row>
         <b-row class="hide-on-med-and-up show-on-med-and-down">
-            <b-card class="m-1 text-dark my-0">
-                <div class="avatar">
-                    <img alt="Person's Photo" :src="author.avatar">
-                </div>
-                <div class="bio">
-                    <h3>{{author.name}}</h3>
-                    <div style="width: 50%; height: 2px; background-color: #b9b9b9; margin: auto"></div>
-                    <p class="text-black-50" style="margin-top: 5px">{{author.bio}}</p>
-                </div>
-            </b-card>
-        </b-row>
-        <b-row class="hide-on-med-and-up show-on-med-and-down" >
-            <photo-thumbnail v-for="(photo, i) in photos" :key="i" width="100%" height="200px" :title="photo.title" :desc="photo.desc" :url="photo.url"/>
+            <photo-thumbnail v-for="(photo, i) in photos" :key="i" style="width: 80%; margin: auto" width="100%"
+                             height="45vw" :title="photo.title" :desc="photo.desc" :url="photo.url"/>
         </b-row>
     </div>
 </template>
@@ -59,9 +50,9 @@
 		components: {
 			PhotoThumbnail,
 		},
-        beforeMount() {
+		beforeMount() {
 			this.fetchData();
-        },
+		},
 		watch: {
 			'$route': 'fetchData'
 		},
@@ -93,6 +84,7 @@
             display: initial !important;
         }
     }
+
     @media only screen and (min-width: 993px) {
 
         .hide-on-med-and-up {
@@ -125,6 +117,7 @@
 
     .avatar {
         text-align: center;
+
         img {
             border-radius: 100px;
             width: 150px;
@@ -133,6 +126,7 @@
             text-align: center;
         }
     }
+
     .bio {
         padding: 10px;
         text-align: center;

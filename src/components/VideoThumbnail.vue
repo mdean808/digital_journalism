@@ -49,7 +49,7 @@
 
     .thumb {
         cursor: pointer;
-        margin: 20px;
+        margin-bottom: 35px !important;
     }
 
     .desc {

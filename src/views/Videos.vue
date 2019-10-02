@@ -1,13 +1,14 @@
 <template>
-    <div>
-        <b-container>
-            <b-row>
-                <Box v-for="(video, i) of videos" style="width: 100%" :key="i" hover color="#6fc3df"
-                     :image="`https://img.youtube.com/vi/${video.yt_id}/maxresdefault.jpg`" :header="video.title" :body="video.desc"
+    <b-container>
+        <b-row>
+            <b-col cols="12">
+                <Box v-for="(video, i) of videos" :key="i"  hover color="#6fc3df"
+                     :image="`https://img.youtube.com/vi/${video.yt_id}/maxresdefault.jpg`" :header="video.title"
+                     :body="video.desc"
                      :link="`/video?id=${video.id}`"/>
-            </b-row>
-        </b-container>
-    </div>
+            </b-col>
+        </b-row>
+    </b-container>
 </template>
 
 <script>

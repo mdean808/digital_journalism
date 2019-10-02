@@ -2,52 +2,42 @@
     <div class="template">
         <b-row class="hide-on-med-and-down">
             <b-col cols="2">
-                <video-thumbnail v-for="(video, i) in videos" :key="i" :id="video.id" width="100%" height="200px"
+                <video-thumbnail v-for="(video, i) in videos" :key="i" :id="video.id" width="100%" height="9vw"
                                  :title="video.title" :desc="video.desc" :url="video.url"/>
             </b-col>
             <b-col cols="8">
                 <VideoEmbed width="100%" height="35vw" :url="video.url"/>
-                <b-card class="text-dark text-center">
+                <div class="text-light text-center" style="margin-top: 30px">
                     <h1>{{video.title}}</h1>
-                    <div style="width: 50%; height: 2px; background-color: #b9b9b9; margin: auto"></div>
+                    <div style="width: 50%; height: 2px; background-color: #b0b0b0; margin: auto"></div>
                     <p style="margin-top: 10px">{{video.desc}}</p>
-                </b-card>
+                </div>
             </b-col>
             <b-col cols="2" class="profile">
-                <b-card class="m-1 text-dark my-0">
+                <div class="m-1 text-light my-0">
                     <div class="avatar">
                         <img alt="Person's Photo" :src="author.avatar">
                     </div>
                     <div class="bio">
                         <h3>{{author.name}}</h3>
-                        <div style="width: 50%; height: 2px; background-color: #b9b9b9; margin: auto"></div>
-                        <p class="text-black-50" style="margin-top: 5px">{{author.bio}}</p>
+                        <div style="width: 50%; height: 2px; background-color: #b0b0b0; margin: auto"></div>
+                        <p class="text-light" style="margin-top: 5px">{{author.bio}}</p>
                     </div>
-                </b-card>
+                </div>
             </b-col>
         </b-row>
         <b-row class="hide-on-med-and-up show-on-med-and-down" style="margin: auto;">
             <VideoEmbed width="100%" height="50vw" :url="video.url"/>
-            <b-card class="text-dark text-center">
+            <div class="text-light text-center" style="margin-top: 20px">
                 <h1>{{video.title}}</h1>
-                <div style="width: 50%; height: 2px; background-color: #b9b9b9; margin: auto"></div>
+                <p style="color: #bbbbbb">By {{author.name}}</p>
+                <div style="width: 50%; height: 2px; background-color: #b0b0b0; margin: auto"></div>
                 <p style="margin-top: 10px">{{video.desc}}</p>
-            </b-card>
+            </div>
         </b-row>
         <b-row class="hide-on-med-and-up show-on-med-and-down">
-            <b-card class="m-1 text-dark my-0">
-                <div class="avatar">
-                    <img alt="Person's Photo" :src="author.avatar">
-                </div>
-                <div class="bio">
-                    <h3>{{author.name}}</h3>
-                    <div style="width: 50%; height: 2px; background-color: #b9b9b9; margin: auto"></div>
-                    <p class="text-black-50" style="margin-top: 5px">{{author.bio}}</p>
-                </div>
-            </b-card>
-        </b-row>
-        <b-row class="hide-on-med-and-up show-on-med-and-down">
-            <video-thumbnail v-for="(video, i) in videos" :key="i" :id="video.id" style="width: 70%; margin: auto" width="100%" height="200px"
+            <video-thumbnail v-for="(video, i) in videos" :key="i" :id="video.id" style="width: 80%; margin: auto"
+                             width="100%" height="45vw"
                              :title="video.title" :desc="video.desc" :url="video.url"/>
         </b-row>
     </div>
@@ -108,11 +98,6 @@
         margin: 5px 5px 40px 5px;
     }
 
-    .profile {
-        display: grid;
-        grid-template-rows: .4fr 1fr;
-    }
-
     .thumbnails::-webkit-scrollbar {
         width: 0 !important
     }
@@ -126,8 +111,8 @@
 
         img {
             border-radius: 100px;
-            width: 150px;
-            height: 150px;
+            width: 100px;
+            height: 100px;
             margin: auto;
             text-align: center;
         }

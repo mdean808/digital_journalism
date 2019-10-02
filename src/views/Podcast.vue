@@ -2,7 +2,7 @@
     <div class="layout">
         <b-row class="hide-on-med-and-down">
             <b-col cols="2">
-                <SoundCloudThumbnail v-for="(podcast, i) in podcasts" :key="i" width="100%" height="150px"
+                <SoundCloudThumbnail v-for="(podcast, i) in podcasts" :key="i" width="100%" height="9vw"
                                      :id="podcast.id"
                                      :title="podcast.title" :desc="podcast.desc" :url="podcast.imgLink"/>
             </b-col>
@@ -27,26 +27,18 @@
         </b-row>
         <b-row class="hide-on-med-and-up show-on-med-and-down" style="margin: auto;">
             <SoundCloudEmbed class="my-1" width="100%" height="200px" :url="podcast.url"/>
-            <b-card :title="podcast.title" class="text-dark">
+            <b-card :title="podcast.title" class="text-dark" style="margin-top: 20px">
+                <p>By {{author.name}}</p>
+                <div style="width: 50%; height: 2px; margin-bottom: 14px;background-color: #b0b0b0;"></div>
                 <p>{{podcast.desc}}</p>
             </b-card>
         </b-row>
         <b-row class="hide-on-med-and-up show-on-med-and-down">
-            <b-card class="m-1 text-dark my-0">
-                <div class="avatar">
-                    <img alt="Person's Photo" :src="author.avatar">
-                </div>
-                <div class="bio">
-                    <h3>{{author.name}}</h3>
-                    <div style="width: 50%; height: 2px; background-color: #b9b9b9; margin: auto"></div>
-                    <p class="text-black-50" style="margin-top: 5px">{{author.bio}}</p>
-                </div>
-            </b-card>
-        </b-row>
-        <b-row class="hide-on-med-and-up show-on-med-and-down" >
-            <SoundCloudThumbnail v-for="(podcast, i) in podcasts" :key="i" width="100%" height="150px"
+            <SoundCloudThumbnail v-for="(podcast, i) in podcasts" :key="i" style="width: 80%; margin: auto" width="100%"
+                                 height="45vw"
                                  :id="podcast.id"
-                                 :title="podcast.title" :desc="podcast.desc" :url="podcast.imgLink"/>        </b-row>
+                                 :title="podcast.title" :desc="podcast.desc" :url="podcast.imgLink"/>
+        </b-row>
     </div>
 </template>
 
