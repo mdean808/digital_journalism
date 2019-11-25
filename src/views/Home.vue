@@ -1,5 +1,10 @@
 <template>
-<div>
+<div style="padding-top: 100vh;">
+    <div id="videoWithNoJs" class="videoWrapper">
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/bntusLfwyN4?autoplay=1&loop=1&controls=0&rel=0&showinfo=0&mute=1&enablejsapi=1&modestbranding=1" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+        
+    </div>
+    <!--
         <Box parallax
              box-class="text-center"
              box-style="padding-top: 200px !important; padding-bottom: 150px !important; height: 100vh"
@@ -12,6 +17,14 @@
              image="/img/vast.png">
             <a href="#content" class="btn btn-outline-light">DISCOVER VAST STORYTELLING</a>
         </Box>
+    -->
+
+<!--
+
+    <div class="read-more">
+        <h2>READ MORE</h2>
+        </div>
+        -->
 
         <div class="hide-on-med-and-down">
             <b-row id="content">
@@ -87,6 +100,13 @@
         width: calc(100vw - 15px);
     }
 
+    .read-more {
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        bottom: 100vh;
+    }
+
     html {
         scroll-behavior: smooth;
     }
@@ -109,6 +129,21 @@
 </script>
 
 <style scoped>
+    .videoWrapper {
+        height:100vh;
+        width:100vw;
+        position: absolute;
+        overflow: hidden;
+    }
+
+    .videoWrapper iframe {
+        height:100%;
+        width:100%;
+        position:absolute;
+        top:0;
+        bottom:0;
+    }
+
     @media only screen and (max-width: 992px) {
         .hide-on-med-and-down {
             display: none !important;
