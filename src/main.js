@@ -4,6 +4,8 @@ import router from './router'
 import store from './store'
 import './scss/globals.scss'
 import BootstrapVue from "bootstrap-vue";
+import $ from "jquery";
+
 
 Vue.use(BootstrapVue);
 
