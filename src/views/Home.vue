@@ -240,6 +240,8 @@ export default {
   left: 0px;
   width: calc(100vw - 17px);
   height: 100vh;
+  
+  background: black;
 }
 .video {
   display: block;
@@ -254,6 +256,20 @@ export default {
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
 }
+
+
+.video::before {
+  content: "";
+  position: absolute;
+  top: 0; 
+  left: 0;
+  width: 100%; 
+  height: 100%;  
+  opacity: .1; 
+  z-index: -1;
+  background: url(https://i.stack.imgur.com/sIIwU.gif);
+}
+
 .video .wrapper {
   display: block;
   height: 300%;
