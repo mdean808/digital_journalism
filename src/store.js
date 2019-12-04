@@ -78,7 +78,14 @@ export default new Vuex.Store({
 				author: '3'
 			}
 		],
-		articles: [],
+		articles: [
+			{
+				id: '0',
+				title: 'Cookbook',
+				desc: 'Many countries that are prominently known for their cuisine revolve around a theme that makes them so well regarded. French food is prided on its simplicity and yet finding the sophistication within the simplicity. The ingredients used are the basics such as butter, olive oil, and other condiments that pair with tasty cuts of meat or seafood. Obviously, it isn’t possible to capture the complexity of French cuisine in a couple of sentences but the essence lies in how detailed and multifaceted flavor combinations can be achieved, with simple ingredients and finesse. On the other end of the spectrum lies Indian cuisine. While the historically Indian food is way more entangled, it is possible to separate it geographically in five general categories: The North, South, East, West, and Northeast. All of these different areas have distinct culinary differences and yet they can be united with the oversimplified and often distorted title of “Indian food”. The importance of understanding the culinary diversity of India is important, but I believe that common ground between all of these different kitchens is how masterpieces could be achieved with the right correct flavor and spice combinations. If French food is based on simplicity and the basics, Indian food is about using historical, generational, and familial knowledge to find the perfect flavor combinations out of a vast world of different tastes, spices, and techniques. The ability to marry these two different ways of cooking from the East, and West so to speak, is the reason why I think Turkish food is so special. Only by understanding the depth and history that forms the culinary composition of a country, can we really understand what makes it so unique. For a lot of people, food is an agent of survival, and survival only. I am privileged enough to look a little bit deeper than that and analyze the implication behind everything that I eat: ethically, culturally, historically, and even emotionally. The tiny bit of background knowledge I provided earlier is an example of what these series of articles will be aiming to accomplish. Diving multiple levels deep into the stories behind what we and how that composes the way that we perceive food around us.',
+				author: '1',
+				url: '/img/photo-0.jpg'
+			}],
 		photos: [
 			{
 				id: '0',
