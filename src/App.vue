@@ -2,11 +2,11 @@
     <b-container fluid id="app">
         <b-row id="nav" class="py-2 mt-2" style="/* position: absolute; */ width: 100vw; margin: auto;">
             <b-col class="text-center navvy">
-                <router-link to="/photos">photos</router-link>
-                <router-link to="/videos">videos</router-link>
-                <router-link to="/" class="hide-on-med-and-down"><h1 class="mx-5">V A S T</h1></router-link>
-                <router-link to="/podcasts">podcasts</router-link>
-                <router-link to="/articles">articles</router-link>
+                <router-link to="/photos" class="dshado">photos</router-link>
+                <router-link to="/videos" class="dshado">videos</router-link>
+                <router-link to="/" class="hide-on-med-and-down"><h1 class="mx-5 font-weight-light shado">V A S T</h1></router-link>
+                <router-link to="/podcasts" class="dshado">podcasts</router-link>
+                <router-link to="/articles" class="dshado">articles</router-link>
             </b-col>
         </b-row>
 
@@ -35,6 +35,14 @@
 </script>
 
 <style lang="scss">
+    .shado {
+        text-shadow: 2px 2px #000000, 0px 0px 9px rgba(128, 128, 128, 1);
+    }
+
+    .dshado {
+        text-shadow: 0px 0px 9px rgba(0, 0, 0, 1);
+    }
+
     .body {
         min-height: calc(100vh - 217px);
     }
