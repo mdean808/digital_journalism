@@ -32,7 +32,7 @@
 				return decodeURIComponent(results[2].replace(/\+/g, ' '));
 			},
             goto(id) {
-				if (id) this.$router.push(`/video?id=${id}`)
+				if (id && this.$router.route.params.id !== id) this.$router.push(`/video?id=${id}`)
             }
 		}
 	}

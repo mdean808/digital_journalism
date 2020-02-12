@@ -11,7 +11,7 @@ export default new Vuex.Store({
 				name: 'Ry Bleckel',
 				email: 'rbleckel@hpa.edu',
 				bio: 'Videographer, Photographer, Musician',
-				avatar: 'http://norapc.org/wp-content/uploads/2015/07/avatar-blank.png',
+				avatar: './img/avatars/ry.jpg',
 				videos: ['0'],
 				podcasts: [],
 				articles: [],
@@ -22,7 +22,7 @@ export default new Vuex.Store({
 				name: 'Sacha Grunberg',
 				email: 'sbgrunberg@hpa.edu',
 				bio: 'Entrepreneur, Podcaster',
-				avatar: 'http://norapc.org/wp-content/uploads/2015/07/avatar-blank.png',
+				avatar: 'https://norapc.org/wp-content/uploads/2015/07/avatar-blank.png',
 				videos: [],
 				podcasts: ['0'],
 				articles: [],
@@ -43,7 +43,7 @@ export default new Vuex.Store({
 				id: '3',
 				name: 'May-J Bui',
 				email: 'hbui@hpa.edu',
-				avatar: 'http://norapc.org/wp-content/uploads/2015/07/avatar-blank.png',
+				avatar: 'https://norapc.org/wp-content/uploads/2015/07/avatar-blank.png',
 				bio: 'Podcaster',
 				videos: [],
 				podcasts: ['1'],
@@ -63,9 +63,9 @@ export default new Vuex.Store({
 		podcasts: [
 			{
 				id: '0',
-				title: 'Sacha Experience #1',
+				title: 'Ry Bleckel',
 				url: 'https://soundcloud.com/sacha-grunberg/podcast-episode-0-the-ry-bleckel-experience',
-				imgLink: 'https://www.irishexaminer.com/remote/media.central.ie/media/images/p/PodcastCornerLogo_large.jpg',
+				imgLink: './img/avatars/ry.jpg',
 				desc: 'This podcast features Ry Bleckel telling his story about the struggles he has experienced in baseball season these last couple of years.',
 				author: '1'
 			},

@@ -1,8 +1,8 @@
 <template>
-    <b-container>
+    <b-container style="padding: 0; !important;">
         <b-row>
             <b-col cols="12">
-                <Box v-for="(video, i) of videos" :key="i"  hover color="#6fc3df"
+                <Box v-for="(video, i) of videos" :key="i"  hover :color="color(video.title)"
                      :image="`https://img.youtube.com/vi/${video.yt_id}/maxresdefault.jpg`" :header="video.title"
                      :body="video.desc"
                      :link="`/video?id=${video.id}`"/>
@@ -13,6 +13,7 @@
 
 <script>
 	import Box from '../components/Box'
+	import ColorShader from '../helpers/colorshader'
 
 	export default {
 		name: "Videos",
@@ -34,6 +35,9 @@
 				if (!results) return null;
 				if (!results[2]) return '';
 				return decodeURIComponent(results[2].replace(/\+/g, ' '));
+			},
+			color: (seed) => {
+				return ColorShader.color(seed, 50, 43);
 			}
 		},
 		mounted() {

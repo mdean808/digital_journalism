@@ -63,6 +63,7 @@
 			fetchData() {
 				console.log('Updating Page');
 				const id = this.$route.query.id;
+				console.log(id);
 				if (!id) return this.$router.push('/podcasts');
 				this.podcast = this.$store.getters.podcast(this.$route.query.id);
 
