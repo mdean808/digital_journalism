@@ -49,6 +49,17 @@ export default new Vuex.Store({
 				podcasts: ['1'],
 				articles: [],
 				photos: []
+			},
+			{
+				id: '4',
+				name: 'Morgan Dean',
+				email: 'mdean@hpa.edu',
+				avatar: 'http://norapc.org/wp-content/uploads/2015/07/avatar-blank.png',
+				bio: 'Writer, Programmer',
+				videos: [],
+				podcasts: [],
+				articles: ['1'],
+				photos: []
 			}
 		],
 		videos: [
