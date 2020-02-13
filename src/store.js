@@ -106,6 +106,18 @@ export default new Vuex.Store({
 					'This week isn’t even over (hell, it’s still Wednesday), and we haven’t even touched on other news, like sports, tech, and memes. We here at Morgan Writes some Bullshit are totally exhausted (from lack of sleep) and really think the world could slow down on the news cycles. We believe that all of the news above is enough for one entire week -- not 3 days of one. \n',
 				author: '4',
 				url: 'https://storage.googleapis.com/gd-wagtail-prod-assets/images/evolving_google_identity_2x.max-4000x2000.jpegquality-90.jpg'
+			},
+			{
+				id: '2',
+				title: 'Musik scene: Les Paul',
+				desc: 'Lester William Polsfuss, also known as Les Paul, was an inventor, a songwriter, and a pioneer of modern music. His innovative spirit led to the defining of musical styles, many recording innovations, and even the electric guitar.\n' +
+					'Outside of politics, though, Tesla’s stock has gone through the roof, and then crashed again. When the markets opened on Monday, TSLA was worth $650. By the time markets opened on Tuesday, it was worth $914 dollars, and then peaking at $961. Alas, though, Tesla was not meant to go to the moon. (That’s why we have SpaceX) When markets closed on Wednesday, TSLA was worth $734, down $224 from Tuesday. What a roller coaster ride. The members over at r/wallstreetbets were melting down over all of the earnings they were making, and then everything fell apart, leading to an influx of memes and karma farming. \n' +
+					'Even at a very young age, Les Paul repeatedly demonstrated his talent at music. By the time he became a teenager, he was already a musical prodigy. Lester dropped out of high school in 1934 and performed semi-professionally as a country singer and guitarist. Making money from tips during drive-in playings, Les Paul began sound experiments that would go down in music history.					\n' +
+					'At the time, recording with a full band was cumbersome and greatly limited. Les Paul refused to settle, despite the limitations of the technology, and continued to experiment towards being better. He began utilizing techniques such as multitrack recording and overdubbing, enabling one to combine multiple instrument recordings into one track. Musicians everywhere came to Les Paul, requesting a home recording from him.					\n' +
+					'But tragedy struck in 1948, when the legendary guitarist shattered his right arm and elbow in a near-fatal automobile instrument. The doctors told him that they could not rebuild his elbow, and all mobility was lost. This would mean the end of a musical career, but Les Paul refused to surrender. He requested his arm be put in a 90 degree angle so he could keep playing the guitar. This was evidence that Les Paul refuses to settle, continuing his constant need to experiment.					\n' +
+					'Les Paul continued to attract the world’s attention with playing styles such as lick, trills, chording sequences, and fretting techniques. After inventing the solid body electric guitar, he became the only individual to be in both the Rock and Roll Hall of Fame and the National Inventors Hall of Fame. His influences on the musical industry have been used by almost every musician since.',
+				author: '4',
+				url: 'https://storage.googleapis.com/gd-wagtail-prod-assets/images/evolving_google_identity_2x.max-4000x2000.jpegquality-90.jpg'
 			}
 			],
 		photos: [
