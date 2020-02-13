@@ -60,6 +60,17 @@ export default new Vuex.Store({
 				podcasts: [],
 				articles: ['1'],
 				photos: []
+			},
+			{
+				id: '5',
+				name: 'Dillon DuPont',
+				email: 'ddupont@hpa.edu',
+				avatar: 'http://norapc.org/wp-content/uploads/2015/07/avatar-blank.png',
+				bio: 'Writer, Programmer',
+				videos: [],
+				podcasts: [],
+				articles: ['2'],
+				photos: []
 			}
 		],
 		videos: [
@@ -116,8 +127,8 @@ export default new Vuex.Store({
 					'At the time, recording with a full band was cumbersome and greatly limited. Les Paul refused to settle, despite the limitations of the technology, and continued to experiment towards being better. He began utilizing techniques such as multitrack recording and overdubbing, enabling one to combine multiple instrument recordings into one track. Musicians everywhere came to Les Paul, requesting a home recording from him.					\n' +
 					'But tragedy struck in 1948, when the legendary guitarist shattered his right arm and elbow in a near-fatal automobile instrument. The doctors told him that they could not rebuild his elbow, and all mobility was lost. This would mean the end of a musical career, but Les Paul refused to surrender. He requested his arm be put in a 90 degree angle so he could keep playing the guitar. This was evidence that Les Paul refuses to settle, continuing his constant need to experiment.					\n' +
 					'Les Paul continued to attract the world’s attention with playing styles such as lick, trills, chording sequences, and fretting techniques. After inventing the solid body electric guitar, he became the only individual to be in both the Rock and Roll Hall of Fame and the National Inventors Hall of Fame. His influences on the musical industry have been used by almost every musician since.',
-				author: '4',
-				url: 'https://storage.googleapis.com/gd-wagtail-prod-assets/images/evolving_google_identity_2x.max-4000x2000.jpegquality-90.jpg'
+				author: '5',
+				url: 'https://cdn.pixabay.com/photo/2019/09/29/23/20/les-paul-4514535_960_720.png'
 			}
 			],
 		photos: [
