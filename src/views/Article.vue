@@ -11,7 +11,7 @@
                 <div class="text-light text-center" style="margin: 20px 0">
                     <h1>{{article.title}}</h1>
                     <div style="width: 50%; height: 2px; background-color: #b0b0b0; margin: auto"></div>
-                    <p style="margin-top: 10px">{{article.desc}}</p>
+                    <p class="article">{{article.desc}}</p>
                 </div>
             </b-col>
             <b-col cols="2" class="profile">
@@ -32,7 +32,7 @@
                 <h1>{{article.title}}</h1>
                 <p style="color: #bbbbbb">By {{author.name}}</p>
                 <div style="width: 50%; height: 2px; background-color: #b0b0b0; margin: auto"></div>
-                <p style="margin-top: 10px">{{article.desc}}</p>
+                <p class="article">{{article.desc}}</p>
             </div>
         </b-row>
         <b-row class="hide-on-med-and-up show-on-med-and-down">
@@ -75,7 +75,6 @@
 </script>
 
 <style lang="scss" scoped>
-
     @media only screen and (max-width: 992px) {
         .hide-on-med-and-down {
             display: none !important;
@@ -90,6 +89,16 @@
         .hide-on-med-and-up {
             display: none !important;
         }
+    }
+
+    .article {
+        margin-top: 10px; 
+        font-size: 20px; 
+        max-width: 50em; 
+        margin: auto;
+        text-align: justify;
+        text-justify: inter-word;
+  white-space: pre-line;     
     }
 
     .profile {
