@@ -2,29 +2,36 @@
     <div class="template">
         <b-row class="hide-on-med-and-down">
             <b-col cols="2">
-                <photo-thumbnail v-for="(article, i) in articles" :key="i" width="100%" height="9vw" :title="article.title"
-                                 :desc="article.desc" :url="article.url"/>
+                <photo-thumbnail v-for="(article, i) in articles" :key="i" :id="i" width="100%" height="9vw" :title="article.title"
+                                 :desc="article.desc" :url="article.url" type="article" />
                                  
             </b-col>
             <b-col cols="8">
                 <!--<img alt="Photo Alternate" style="width: 100%; height: 35vw" :src="article.url"/>-->
-                <div class="text-light text-center" style="margin: 20px 0">
-                    <h1>{{article.title}}</h1>
-                    <div style="width: 50%; height: 2px; background-color: #b0b0b0; margin: auto"></div>
-                    <p class="article">{{article.desc}}</p>
+                <div class="text-light mb-4">
+                    
+                    <!--<div style="width: 50%; height: 2px; background-color: #b0b0b0; margin: auto"></div>-->
+                    <b-card class="text-dark px-4">
+                        <h1 class="text-center mb-4 mt-2">{{article.title}}</h1>
+                    <p class="article" v-html="require('markdown-it')({
+  html: true,
+  linkify: true,
+  typographer: true
+}).render(article.desc)"></p>
+                    </b-card>
                 </div>
             </b-col>
             <b-col cols="2" class="profile">
-                <div class="m-1 text-light my-0">
+                <b-card class="m-1 text-dark my-0">
                     <div class="avatar">
                         <img alt="Person's Photo" :src="author.avatar">
                     </div>
                     <div class="bio">
                         <h3>{{author.name}}</h3>
                         <div style="width: 50%; height: 2px; background-color: #b9b9b9; margin: auto"></div>
-                        <p class="text-light" style="margin-top: 5px">{{author.bio}}</p>
+                        <p class="text-black-50" style="margin-top: 5px">{{author.bio}}</p>
                     </div>
-                </div>
+                </b-card>
             </b-col>
         </b-row>
         <b-row class="hide-on-med-and-up show-on-med-and-down" style="margin: auto;">
@@ -99,6 +106,10 @@
         text-align: justify;
         text-justify: inter-word;
   white-space: pre-line;     
+    }
+
+    p {
+       text-indent: 2rem;
     }
 
     .profile {

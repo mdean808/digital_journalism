@@ -3,7 +3,7 @@
         <b-row class="hide-on-med-and-down">
             <b-col cols="2">
                 <photo-thumbnail v-for="(photo, i) in photos" :key="i" width="100%" height="9vw" :title="photo.title"
-                                 :desc="photo.desc" :url="photo.url"/>
+                                 :desc="photo.desc" :url="photo.url" :id="i" type="photo"/>
             </b-col>
             <b-col cols="8">
                 <img alt="Photo Alternate" style="width: 100%; height: 35vw" :src="photo.url"/>

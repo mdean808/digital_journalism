@@ -1,5 +1,5 @@
 <template>
-    <div class="thumb" @click="goto(id)">
+    <div class="thumb" @click="goto(id, type)">
         <img :alt="`Thumbnail for ${url}`" :style="{width: width, height: height}"
              :src="url">
         <div class="desc">
@@ -12,10 +12,10 @@
 <script>
 	export default {
 		name: "PhotoThumbnail",
-		props: ['url', 'width', 'height', 'title', 'desc', 'id'],
+		props: ['url', 'width', 'height', 'title', 'desc', 'id', 'type'],
         methods: {
-			goto(id) {
-				if (id) this.$router.push(`/photo?id=${id}`)
+			goto(id, type) {
+				if (id) this.$router.push(`/${type}?id=${id}`)
             }
         }
 	}
