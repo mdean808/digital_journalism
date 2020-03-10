@@ -129,6 +129,41 @@ export default new Vuex.Store({
 					'Les Paul continued to attract the world’s attention with playing styles such as lick, trills, chording sequences, and fretting techniques. After inventing the solid body electric guitar, he became the only individual to be in both the Rock and Roll Hall of Fame and the National Inventors Hall of Fame. His influences on the musical industry have been used by almost every musician since.',
 				author: '5',
 				url: 'https://cdn.pixabay.com/photo/2019/09/29/23/20/les-paul-4514535_960_720.png'
+			},
+			{
+				id: '3',
+				author: '4',
+				title: `week in review: presidential race heaven (or hell) + knock knock it's the coronavirus again`,
+				desc: `
+				
+This has been a big week for the two main stories I’ve been covering in these weeks in review. The coronavirus has decided to finally make significant landfall in a large amount of western countries, Super Tuesday has affected the democratic primaries significantly (keep reading to see who survives this round of delegate roulette), and Heinaken has seen a record amount of beer sales in the past month. No one knows why.
+
+The coronavirus has eliminated two of it’s enemies on US soil, while continuing to wage all out war in the rest of the world, with as many as 100+ deaths in Italy and almost 3,000 in China. Experts haven’t been sure of exactly what started the spread of the coronavirus, but with some new information that came to light, everything is starting to make sense. The virus thought to come from an animal called a pangolin, a scaly anteater. It is regularly hunted and eaten by people living in China, so much so that it has come close to extinction. This is interesting -- the pangolin is on the endangered species list. I think we have a motive here. The animal is obviously fighting back against us, the people who are hunting it, with a virus, the coronavirus. Some people think China is attempting a suicidal biological warfare, but no, this is an animal attacking all humans, and being quite successful so far. As the death toll in the US rises, be wary. You never know when you might find a crazy pangolin down your path or a virus in your bloodstream. Good luck out there. You’re gonna need it.
+
+![](https://i.imgur.com/XDQqMem.png)
+
+In other, much happier news (not), the presidential primaries are under full swing! Trump is continuing to smash all other republican candidates, removing Joe Walsh and Bill Weld. Did you know Joe Walsh was also a politician? I thought he wrote masterpieces like _Life’s Been Good_ and _Rocky Mountain Way_, but hey, I guess he thought he could really save the republican party with a total of 1 delagate against ol’ Trumperooni. Good thing, the democratic primaries are much more eventful. Pete “Mayor Pete, Pete Booty Check” Buttigieg, started off strong in the Iowa caucuses and the New Hampshire primary, but then had some trouble in Nevada and South Carolina, and suddenly dropped out of the presidential race. A surprise to be sure, (but a welcome one????), especially that guy who donated 500 dollars to the campaign less than 60 minutes after Pete announced his withdrawal. The world (well, at least me) expected him to continue on his rampage, checking booties and getting delegates for a long time to come. I guess it’s time, Booty Check.
+
+![](https://i.imgur.com/RoDLe92.png)
+
+What a lovely man. In another surprise, Tom Steyer has also dropped out of the race. The last remaining candidate that no one has ever heard of is gone. He is best remembered for hating Tom Sawyer and Mark Twain (again, not sure why), as well as his contributions to the internet by _[dancing to Back Dat Azz Up](https://www.reddit.com/r/PresidentialRaceMemes/comments/fb5tbs/30_seconds_of_unedited_footage_of_tom_steyer/)_ at a rally recently. Less than 2 days later, he unfortunately resigned. We will not be blessed by his dancing again.
+
+![](https://i.imgur.com/u1DEYct.png)
+
+Hopefully Tom Sawyer is a forgiving guy. Now, we think, finally, things are starting to calm down. We have our set frontrunners, and Super Tuesday will be a deciding factor on who we get as our presidential nominee. And then, a day before Super Tuesday, the unthinkable happened. Well, I think at least _some_ people saw this coming. Amy Klobuchar dropped out of the democratic presidential race. After gathering a grand total of seven delegates, I guess she decided she did not have much of a chance against the likes of Benie Sanders, Elizabeth Warren (Wow, she’s still here!) and Joe Biden. Hopefully she continues to[ write back](https://www.reddit.com/r/PresidentialRaceMemes/comments/eszxsu/amy_klobuchars_new_netflix_special_official/) to Trump about climate change. 
+
+Unfortunately we will not have the pleasure of hearing about it again from her this news cycle, but perhaps in another 4 years. 
+
+![](https://i.imgur.com/pGyXCUm.png)
+
+Damn, we’re up to 24 candidates who have droppped out, with only 3 remaining. What a race. Oh, sorry, I forgot about Mike Bloomberg. It seems no amount of money can keep that guy relevant. Did you know he spent 400+ million dollars on his campaign, only to get forgotten in the most prevalent and important politics writeup of all time? Well, at least he won American Samoa’s Delegates. All 4 of them. As we say in the islands, get really got that dub.
+
+![](https://i.imgur.com/z8M98Dg.png)
+
+Alas, although the memes are fun, I’m going to have to end the presidential commentary here, while I’m still ahead. I’m not sure how long I can keep running.
+
+![](https://i.imgur.com/elIQFmA.png)`,
+				url: 'https://i.imgur.com/XDQqMem.png'
 			}
 			],
 		photos: [
